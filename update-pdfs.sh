@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 SINCE=$1
 OUTPUT_DIR=$2
 
