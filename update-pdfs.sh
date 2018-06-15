@@ -6,5 +6,6 @@ IFS='
 '
 
 for x in $(git diff --name-only $SINCE | grep 'mscz$'); do
+	mkdir -p $OUTPUT_DIR/$(dirname $x)
 	musescore "$x" -o "$OUTPUT_DIR/${x/.mscz/.pdf}"
 done
