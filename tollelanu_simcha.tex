@@ -1,0 +1,16 @@
+\documentclass[letterpaper]{book}
+\usepackage{pdfpages}
+
+\begin{document}
+\setlength{\footskip}{72pt}
+\pagestyle{plain}
+\tableofcontents
+
+\chapter{Bakashot}
+
+\includepdfset{pages=-,pagecommand={\thispagestyle{plain}}}
+\includepdf[addtotoc={1,section,1,Yedid Nefesh,YedidNefesh}]{"Yedid Nefesh".pdf}
+\includepdf[addtotoc={1,section,1,Agadelcha,Agadelcha}]{Agadelcha.pdf}
+
+
+\end{document}
