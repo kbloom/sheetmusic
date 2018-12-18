@@ -1,6 +1,20 @@
 \documentclass[letterpaper]{memoir}
 \usepackage{pdfpages}
+\usepackage{polyglossia}
 \setsecnumdepth{none}
+
+\usepackage{fontspec}
+\setmainfont{Frank Ruehl CLM}
+\setmonofont{Miriam Mono CLM}
+\setsansfont{Simple CLM}
+
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+
+\title{\RL{תוללנו שמחה} \\
+Tollelenu Simcha \\
+The Pizmonim Fakebook}
+\author{Chanoch Bloom}
 
 % Takes 2 arguments
 %  #1: The display name for the table of contents
@@ -8,6 +22,11 @@
 \newcommand{\song}[2]{\includepdf[pages=-,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
 
 \begin{document}
+
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
 \setlength{\footskip}{72pt}
 \pagestyle{plain}
 \tableofcontents*
