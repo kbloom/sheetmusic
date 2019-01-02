@@ -20,7 +20,8 @@ The Pizmonim Fakebook}
 %  #1: The display name for the table of contents
 %  #2: The PDF file to include.
 \newcommand{\song}[2]{\includepdf[pages=-,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
-
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
 \begin{document}
 
 \begin{titlingpage}
