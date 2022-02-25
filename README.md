@@ -24,3 +24,4 @@ These are songs I may want to transcribe if I ever get around to them.
 
  * Yifrach v'Yirbeh
  * Yedidi Roi Mikimi
+ * Chai v'Nelam
