@@ -22,8 +22,6 @@ These songs are in MuseScore 3.x format.
 
 These are songs I may want to transcribe if I ever get around to them.
 
- * Chochma Binah Yah Eli
- * Yahaloma
- * Mul Eli V'godlo
- * Ma Navu
- * Im Chacham Libecha
+ * Yifrach v'Yirbeh
+ * Yedidi Roi Mikimi
+ * Chai v'Nelam
