@@ -21,8 +21,11 @@ For B$\flat$ Trumpet
 
 % Takes 2 arguments
 %  #1: The display name for the table of contents
-%  #2: The PDF file to include.
+%  #2: The PDF file to include. This PDF name is used as a label for cross references.
 \newcommand{\song}[2]{\includepdf[pages=-,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
+
+\newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
+
 \usepackage{enumitem}
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
 \begin{document}
@@ -172,6 +175,8 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{Yom Zeh Shiru La'el}{Yom_Zeh_Shiru_Lael.pdf}
 \song{Yoducha Rayonai}{Yoducha_Rayonai.pdf}
 \song{Yoducha Rayonai \#2}{Yoducha_Rayonai_2.pdf}
+\song{Yah Ribon Alam}{Yah_Ribon_Alam.pdf}
+\song{Yah Ribon Alam \#2}{Yah_Ribon_Alam_2.pdf}
 \song{Yedid Nefesh}{Yedid_Nefesh.pdf}
 \song{Agadelcha}{Agadelcha.pdf}
 
@@ -179,7 +184,11 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{Al Tira Avdi Yaakov}{Al_Tira_Avdi_Yaakov.pdf}
 \song{Al Bayit Zeh}{Al_Bayit_Zeh.pdf}
 
-\chapter{Maqam Rast}
+\chapter{Maqam Rast Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{Yah_Ribon_Alam.pdf}
+\end{itemize}
 \song{Eli Yah Eli}{Eli_Yah_Eli.pdf} % possibly omit, because it's unclear whether I did it in the right key
 \song{Riva Riva}{Riva_Riva.pdf}
 \song{El Hon}{El_Hon.pdf}
@@ -187,14 +196,27 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{N'imah Li}{Nimah_Li.pdf}
 \song{Rachum Bach Yagel Levavi}{Rachum_Bach_Yagel_Levavi.pdf}
 
-\chapter{Maqam Hijaz}
+\chapter{Maqam Hijaz Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{Im_Chacham_Libecha_Beni.pdf}
+   \item \songref{Ronu_Gilu.pdf}
+\end{itemize}
 \song{Ana b'Chasdecha}{Ana_bChasdecha.pdf}
 \song{Eleicha Ekra Yah}{Eleicha_Ekra_Yah.pdf}
 \song{Ochil Yom Yom Yerushalyim}{Ochil_Yom_Yom_Yerushalyim.pdf}
 \song{Ozrenei El Chai}{Ozrenei_El_Chai.pdf}
 \song{El Galil}{El_Galil.pdf}
 
-\chapter{Maqam Ajam}
+\chapter{Maqam Ajam Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{Yachid_Norah.pdf}
+   \item \songref{Roe_Neeman_Hu.pdf}
+   \item \songref{Chanun_Rachem.pdf}
+   \item \songref{Yah_Hatzel_Yonah.pdf}
+   \item \songref{Makhelot_Am.pdf}
+\end{itemize}
 \song{Refa Tziri}{Refa_Tziri.pdf}
 \song{Ani Likrat}{Ani_Likrat.pdf}
 \song{Ani Alayich Ayuma}{Ani_Alayich_Ayuma.pdf}
@@ -202,7 +224,14 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{Kol Et Eleicha}{Kol_Et_Eleicha.pdf}
 \song{Halleluyah Tehillim 150}{Halleluyah_Tehillim_150.pdf}
 
-\chapter{Maqam Nahawand}
+\chapter{Maqam Nahawand Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{Lneri.pdf}
+   \item \songref{Rachum_Atah.pdf}
+   \item \songref{Yedid_Nefesh.pdf}
+   \item \songref{Agadelcha.pdf}
+\end{itemize}
 \song{Malki Tzuri El Kabir}{Malki_Tzuri_El_Kabir.pdf}
 \song{Lach Ana Orech}{Lach_Ana_Orech.pdf}
 \song{Im HaGolan}{Im_HaGolan.pdf}
@@ -210,12 +239,22 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{Hayyim U'Madon}{Hayyim_UMadon.pdf}
 \song{L'David Shir U'Mizmor}{LDavid_Shir_uMizmor.pdf}
 
-\chapter{Maqam Kurd}
+\chapter{Maqam Kurd Family}
 \song{Im Ninalu}{Im_Ninalu.pdf}
 \song{Eshal Elohai}{Eshal_Elohai.pdf}
 \song{Yerushalyim Ir HaBirah}{Yerushalyim_Ir_HaBirah.pdf}
 
-\chapter{Maqam Bayat}
+\chapter{Maqam Bayat Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{El_Meod_Naalah.pdf}
+   \item \songref{Yaalah_Yaalah.pdf}
+   \item \songref{Yifat_Ayin.pdf}
+   \item \songref{Nava_Yafa_Tzviyah.pdf}
+   \item \songref{Ezer_Mitzarai.pdf}
+   \item \songref{Daat_Umzimah.pdf}
+   \item \songref{Mauzi.pdf}
+\end{itemize}
 \song{Yahaloma}{Yahaloma.pdf}
 \song{Ana Chaper}{Ana_Chaper.pdf}
 \song{Nagila Halleluyah}{Nagila_Halleluyah.pdf}
@@ -224,11 +263,23 @@ Mauro Braunstein also has a great chapter on the Arabic maqamat at
 \song{Havivi Yah Havivi}{Havivi_Yah_Havivi.pdf}
 \song{Yotzer MiYado}{Yotzer_MiYado.pdf}
 
-\chapter{Maqam Saba}
+\chapter{Maqam Saba Family}
+Other songs in this maqam:
+\begin{itemize}
+   \item \songref{Yehi_Shalom_bCheleinu_Syrian.pdf}
+   \item \songref{Sukkah_vLulav_Iraqi.pdf}
+   \item \songref{Ki_Eshmerah_Shabbat_Turkish.pdf}
+\end{itemize}
+
 \song{Goel Yavo}{Goel_Yavo.pdf}
 \song{Yedidi Roi Mikimi}{Yedidi_Roi_Mikimi.pdf}
 
-\chapter{Maqam Sigah}
+\chapter{Maqam Sigah Family}
+Other songs in this maqam family:
+\begin{itemize}
+   \item \songref{Or_Gilah.pdf}
+   \item \songref{Eli_Tzur_Yishuati.pdf}
+\end{itemize}
 \song{Agila Agila}{Agila_Agila.pdf}
 \song{Adon Yachid}{Adon_Yachid.pdf}
 \song{HaYemei S'timei}{HaYemei_Stimei.pdf}
