@@ -2,6 +2,7 @@
 \usepackage{pdfpages}
 \usepackage{polyglossia}
 \usepackage{hyperref}
+\usepackage{ifoddpage}
 \setsecnumdepth{none}
 
 \usepackage{fontspec}
@@ -25,6 +26,21 @@ For B$\flat$ Trumpet
 \newcommand{\song}[2]{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
 
 \newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
+
+% The first argument is a 2-page song that is forced onto facing pages.
+% The second argument is a 1-page song whose location may be swapped to 
+% make that possible.
+\newcommand{\forcefacingpages}[2]{
+   \checkoddpage
+   \ifoddpage
+   #1
+   #2
+   \else
+   #1
+   #2
+   \fi
+}
+
 
 \usepackage{enumitem}
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
@@ -236,8 +252,11 @@ Other songs in this maqam family:
 \end{itemize}
 \song{Malki Tzuri El Kabir}{Malki_Tzuri_El_Kabir.pdf}
 \song{Lach Ana Orech}{Lach_Ana_Orech.pdf}
-\song{Im HaGolan}{Im_HaGolan.pdf}
-\song{Ata El Kabir}{Ata_El_Kabir.pdf}
+\forcefacingpages{
+   \song{Im HaGolan}{Im_HaGolan.pdf}
+}{
+   \song{Ata El Kabir}{Ata_El_Kabir.pdf}
+}
 \song{Hayyim U'Madon}{Hayyim_UMadon.pdf}
 \song{L'David Shir U'Mizmor}{LDavid_Shir_uMizmor.pdf}
 
