@@ -30,6 +30,10 @@ For B$\flat$ Trumpet
 % The first argument is a 2-page song that is forced onto facing pages.
 % The second argument is a 1-page song whose location may be swapped to 
 % make that possible.
+% The first page of a two-page song needs to be on an even page. 
+% Apparently, the page starts changes when we start writing the song, so
+% if we're currently on an odd page, then the first song will start on
+% an even page.
 \newcommand{\forcefacingpages}[2]{
    \checkoddpage
    \ifoddpage
