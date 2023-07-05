@@ -10,6 +10,13 @@
 \setmonofont{Miriam Mono CLM}
 \setsansfont{Simple CLM}
 
+% Work around broken \nameref interaction between memoir and hyperref
+% from https://tex.stackexchange.com/a/648577
+\makeatletter
+\RenewDocumentCommand\nameref{s}
+    {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
+\makeatother
+
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
 
