@@ -5,7 +5,7 @@ OUTPUT_DIR=$2
 IFS='
 '
 
-MUSESCORE=musescore
+MUSESCORE=mscore
 if which musescore3 > /dev/null 2>&1; then
 	MUSESCORE=musescore3
 fi
