@@ -1,0 +1,41 @@
+#!/usr/bin/python
+import sys
+import zipfile
+import tempfile
+import os
+
+def updateZip(zipname, filename, data):
+    # generate a temp file
+    tmpfd, tmpname = tempfile.mkstemp(dir=os.path.dirname(zipname))
+    os.close(tmpfd)
+
+    # create a temp copy of the archive without filename            
+    with zipfile.ZipFile(zipname, 'r') as zin:
+        with zipfile.ZipFile(tmpname, 'w') as zout:
+            zout.comment = zin.comment # preserve the comment
+            for item in zin.infolist():
+                if item.filename != filename:
+                    zout.writestr(item, zin.read(item.filename))
+
+    # replace with the temp archive
+    os.remove(zipname)
+    os.rename(tmpname, zipname)
+
+    # now add filename with its new data
+    with zipfile.ZipFile(zipname, mode='a', compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr(filename, data)
+
+with zipfile.ZipFile(sys.argv[1]) as archive:
+  mscx = next(info for info in archive.filelist if info.filename.endswith(".mscx"))
+  contents = archive.read(mscx.filename).decode()
+
+
+original=contents
+contents=contents.replace('<Instrument id="eb-cornet">','<Instrument id="bb-trumpet">')
+contents=contents.replace('brass.cornet.soprano','brass.trumpet.bflat')
+contents=contents.replace('<longName>B<sym>accidentalFlat</sym> Trumpet</longName>','<longName>B♭ Trumpet</longName>')
+contents=contents.replace('<shortName>B<sym>accidentalFlat</sym> Tpt.</shortName>','<shortName>B♭ Tpt.</shortName>')
+contents=contents.replace('<trackName>Bb Trumpet</trackName>','<trackName>B♭ Trumpet</trackName>')
+
+if contents != original:
+  updateZip(sys.argv[1],mscx.filename,contents)
