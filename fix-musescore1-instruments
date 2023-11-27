@@ -25,17 +25,20 @@ def updateZip(zipname, filename, data):
     with zipfile.ZipFile(zipname, mode='a', compression=zipfile.ZIP_DEFLATED) as zf:
         zf.writestr(filename, data)
 
-with zipfile.ZipFile(sys.argv[1]) as archive:
-  mscx = next(info for info in archive.filelist if info.filename.endswith(".mscx"))
-  contents = archive.read(mscx.filename).decode()
+def fixFile(filename):
+    with zipfile.ZipFile(filename) as archive:
+        mscx = next(info for info in archive.filelist if info.filename.endswith(".mscx"))
+        contents = archive.read(mscx.filename).decode()
 
+    original=contents
+    contents=contents.replace('<Instrument id="eb-cornet">','<Instrument id="bb-trumpet">')
+    contents=contents.replace('brass.cornet.soprano','brass.trumpet.bflat')
+    contents=contents.replace('<longName>B<sym>accidentalFlat</sym> Trumpet</longName>','<longName>B♭ Trumpet</longName>')
+    contents=contents.replace('<shortName>B<sym>accidentalFlat</sym> Tpt.</shortName>','<shortName>B♭ Tpt.</shortName>')
+    contents=contents.replace('<trackName>Bb Trumpet</trackName>','<trackName>B♭ Trumpet</trackName>')
 
-original=contents
-contents=contents.replace('<Instrument id="eb-cornet">','<Instrument id="bb-trumpet">')
-contents=contents.replace('brass.cornet.soprano','brass.trumpet.bflat')
-contents=contents.replace('<longName>B<sym>accidentalFlat</sym> Trumpet</longName>','<longName>B♭ Trumpet</longName>')
-contents=contents.replace('<shortName>B<sym>accidentalFlat</sym> Tpt.</shortName>','<shortName>B♭ Tpt.</shortName>')
-contents=contents.replace('<trackName>Bb Trumpet</trackName>','<trackName>B♭ Trumpet</trackName>')
+    if contents != original:
+        updateZip(filename, mscx.filename, contents)
 
-if contents != original:
-  updateZip(sys.argv[1],mscx.filename,contents)
+for filename in sys.argv[1:]:
+    fixFile(filename)
