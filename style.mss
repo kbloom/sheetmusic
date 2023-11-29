@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<museScore version="3.02">
+<museScore version="4.10">
   <Style>
     <pageWidth>8.5</pageWidth>
     <pageHeight>11</pageHeight>
@@ -13,10 +13,13 @@
     <pageTwosided>1</pageTwosided>
     <staffUpperBorder>7</staffUpperBorder>
     <staffLowerBorder>7</staffLowerBorder>
+    <staffHeaderFooterPadding>1</staffHeaderFooterPadding>
     <staffDistance>6.5</staffDistance>
+    <instrumentNameOffset>1</instrumentNameOffset>
     <akkoladeDistance>6.5</akkoladeDistance>
     <minSystemDistance>9.2</minSystemDistance>
     <maxSystemDistance>15</maxSystemDistance>
+    <alignSystemToMargin>1</alignSystemToMargin>
     <enableVerticalSpread>0</enableVerticalSpread>
     <spreadSystem>2.5</spreadSystem>
     <spreadSquareBracket>1.2</spreadSquareBracket>
@@ -113,42 +116,59 @@
     <keyBarlineDistance>1</keyBarlineDistance>
     <systemHeaderDistance>2.5</systemHeaderDistance>
     <systemHeaderTimeSigDistance>2</systemHeaderTimeSigDistance>
+    <systemTrailerRightMargin>0.5</systemTrailerRightMargin>
     <clefBarlineDistance>0.18</clefBarlineDistance>
     <timesigBarlineDistance>0.5</timesigBarlineDistance>
+    <useStraightNoteFlags>0</useStraightNoteFlags>
     <stemWidth>0.11</stemWidth>
     <shortenStem>1</shortenStem>
-    <shortStemProgression>0.25</shortStemProgression>
+    <stemLength>3.5</stemLength>
+    <stemLengthSmall>2.25</stemLengthSmall>
+    <shortStemStartLocation>1</shortStemStartLocation>
     <shortestStem>2.25</shortestStem>
     <beginRepeatLeftMargin>1</beginRepeatLeftMargin>
     <minNoteDistance>0.4</minNoteDistance>
     <barNoteDistance>1.2</barNoteDistance>
     <barAccidentalDistance>0.3</barAccidentalDistance>
-    <multiMeasureRestMargin>1.2</multiMeasureRestMargin>
     <noteBarDistance>1</noteBarDistance>
     <measureSpacing>1.045</measureSpacing>
+    <measureRepeatNumberPos>-0.5</measureRepeatNumberPos>
+    <mrNumberSeries>0</mrNumberSeries>
+    <mrNumberEveryXMeasures>4</mrNumberEveryXMeasures>
+    <mrNumberSeriesWithParentheses>1</mrNumberSeriesWithParentheses>
+    <oneMeasureRepeatShow1>0</oneMeasureRepeatShow1>
+    <fourMeasureRepeatShowExtenders>0</fourMeasureRepeatShowExtenders>
     <staffLineWidth>0.11</staffLineWidth>
     <ledgerLineWidth>0.16</ledgerLineWidth>
     <ledgerLineLength>0.35</ledgerLineLength>
+    <stemSlashPosition>2</stemSlashPosition>
+    <stemSlashAngle>40</stemSlashAngle>
+    <stemSlashThickness>0.125</stemSlashThickness>
     <accidentalDistance>0.22</accidentalDistance>
     <accidentalNoteDistance>0.22</accidentalNoteDistance>
     <bracketedAccidentalPadding>0</bracketedAccidentalPadding>
     <alignAccidentalsLeft>0</alignAccidentalsLeft>
+    <keysigAccidentalDistance>0.3</keysigAccidentalDistance>
+    <keysigNaturalDistance>0.4</keysigNaturalDistance>
     <beamWidth>0.5</beamWidth>
-    <beamDistance>0.5</beamDistance>
+    <useWideBeams>0</useWideBeams>
     <beamMinLen>1.25</beamMinLen>
     <beamNoSlope>0</beamNoSlope>
+    <snapCustomBeamsToGrid>1</snapCustomBeamsToGrid>
     <dotMag>1</dotMag>
     <dotNoteDistance>0.35</dotNoteDistance>
     <dotRestDistance>0.25</dotRestDistance>
     <dotDotDistance>0.5</dotDotDistance>
-    <propertyDistanceHead>1</propertyDistanceHead>
+    <propertyDistanceHead>0.5</propertyDistanceHead>
     <propertyDistanceStem>0.5</propertyDistanceStem>
-    <propertyDistance>1</propertyDistance>
+    <propertyDistance>0.5</propertyDistance>
     <articulationMag>1</articulationMag>
     <articulationPosAbove x="0" y="0"/>
     <articulationAnchorDefault>2</articulationAnchorDefault>
     <articulationAnchorLuteFingering>4</articulationAnchorLuteFingering>
     <articulationAnchorOther>0</articulationAnchorOther>
+    <articulationStemHAlign>2</articulationStemHAlign>
+    <articulationKeepTogether>1</articulationKeepTogether>
     <lastSystemFillLimit>0.3</lastSystemFillLimit>
     <hairpinPlacement>1</hairpinPlacement>
     <hairpinPosAbove x="0" y="-3.5"/>
@@ -176,14 +196,19 @@
     <hairpinDecrescText>dim.</hairpinDecrescText>
     <hairpinCrescContText>(cresc.)</hairpinCrescContText>
     <hairpinDecrescContText>(dim.)</hairpinDecrescContText>
-    <hairpinLineStyle>1</hairpinLineStyle>
-    <hairpinLineLineStyle>6</hairpinLineLineStyle>
+    <hairpinLineStyle>solid</hairpinLineStyle>
+    <hairpinDashLineLen>3</hairpinDashLineLen>
+    <hairpinDashGapLen>3</hairpinDashGapLen>
+    <hairpinLineLineStyle>dashed</hairpinLineLineStyle>
+    <hairpinLineDashLineLen>6</hairpinLineDashLineLen>
+    <hairpinLineDashGapLen>9</hairpinLineDashGapLen>
     <pedalPlacement>1</pedalPlacement>
     <pedalPosAbove x="0" y="-4"/>
     <pedalPosBelow x="0" y="4"/>
     <pedalLineWidth>0.11</pedalLineWidth>
-    <pedalListStyle>1</pedalListStyle>
-    <pedalBeginTextOffset x="0" y="0.15"/>
+    <pedalLineStyle>solid</pedalLineStyle>
+    <pedalDashLineLen>4</pedalDashLineLen>
+    <pedalDashGapLen>4</pedalDashGapLen>
     <pedalHookHeight>-1.2</pedalHookHeight>
     <pedalFontFace>FreeSerif</pedalFontFace>
     <pedalFontSize>12</pedalFontSize>
@@ -198,6 +223,9 @@
     <pedalFrameRound>0</pedalFrameRound>
     <pedalFrameFgColor r="0" g="0" b="0" a="255"/>
     <pedalFrameBgColor r="255" g="255" b="255" a="0"/>
+    <pedalText></pedalText>
+    <pedalContinueText></pedalContinueText>
+    <pedalEndText></pedalEndText>
     <trillPlacement>0</trillPlacement>
     <trillPosAbove x="0" y="-1"/>
     <trillPosBelow x="0" y="1"/>
@@ -212,7 +240,6 @@
     <harmonyPlacement>0</harmonyPlacement>
     <romanNumeralPlacement>1</romanNumeralPlacement>
     <nashvilleNumberPlacement>0</nashvilleNumberPlacement>
-    <harmonyPlay>0</harmonyPlay>
     <harmonyVoiceLiteral>1</harmonyVoiceLiteral>
     <harmonyVoicing>0</harmonyVoicing>
     <harmonyDuration>0</harmonyDuration>
@@ -302,6 +329,8 @@
     <measureNumberAllStaffs>0</measureNumberAllStaffs>
     <smallNoteMag>0.7</smallNoteMag>
     <graceNoteMag>0.7</graceNoteMag>
+    <graceToMainNoteDist>0.45</graceToMainNoteDist>
+    <graceToGraceNoteDist>0.3</graceToGraceNoteDist>
     <smallStaffMag>0.7</smallStaffMag>
     <smallClefMag>0.8</smallClefMag>
     <genClef>1</genClef>
@@ -328,21 +357,33 @@
     <chordModifierMag>1</chordModifierMag>
     <chordModifierAdjust>0</chordModifierAdjust>
     <concertPitch>0</concertPitch>
+    <multiVoiceRestTwoSpaceOffset>0</multiVoiceRestTwoSpaceOffset>
     <createMultiMeasureRests>0</createMultiMeasureRests>
     <minEmptyMeasures>2</minEmptyMeasures>
     <minMMRestWidth>4</minMMRestWidth>
     <mmRestNumberPos>-1.5</mmRestNumberPos>
+    <mmRestNumberMaskHBar>1</mmRestNumberMaskHBar>
+    <multiMeasureRestMargin>1.2</multiMeasureRestMargin>
+    <mmRestHBarThickness>0.7</mmRestHBarThickness>
+    <mmRestHBarVStrokeThickness>0.2</mmRestHBarVStrokeThickness>
+    <mmRestHBarVStrokeHeight>2</mmRestHBarVStrokeHeight>
+    <oldStyleMultiMeasureRests>0</oldStyleMultiMeasureRests>
+    <mmRestOldStyleMaxMeasures>9</mmRestOldStyleMaxMeasures>
+    <mmRestOldStyleSpacing>0.85</mmRestOldStyleSpacing>
     <hideEmptyStaves>0</hideEmptyStaves>
-    <dontHidStavesInFirstSystm>1</dontHidStavesInFirstSystm>
-    <enableIndentationOnFirstSystem>1</enableIndentationOnFirstSystem>
+    <dontHideStavesInFirstSystem>1</dontHideStavesInFirstSystem>
+    <enableIndentationOnFirstSystem>0</enableIndentationOnFirstSystem>
     <firstSystemIndentationValue>5</firstSystemIndentationValue>
     <alwaysShowBracketsWhenEmptyStavesAreHidden>0</alwaysShowBracketsWhenEmptyStavesAreHidden>
+    <alwaysShowSquareBracketsWhenEmptyStavesAreHidden>0</alwaysShowSquareBracketsWhenEmptyStavesAreHidden>
     <hideInstrumentNameIfOneInstrument>1</hideInstrumentNameIfOneInstrument>
     <gateTime>100</gateTime>
     <tenutoGateTime>100</tenutoGateTime>
     <staccatoGateTime>50</staccatoGateTime>
     <slurGateTime>100</slurGateTime>
     <ArpeggioNoteDistance>0.5</ArpeggioNoteDistance>
+    <ArpeggioAccidentalDistance>0.5</ArpeggioAccidentalDistance>
+    <ArpeggioAccidentalDistanceMin>0.33</ArpeggioAccidentalDistanceMin>
     <ArpeggioLineWidth>0.18</ArpeggioLineWidth>
     <ArpeggioHookLen>0.8</ArpeggioHookLen>
     <ArpeggioHiddenInStdIfTab>0</ArpeggioHiddenInStdIfTab>
@@ -350,7 +391,10 @@
     <slurMidWidth>0.21</slurMidWidth>
     <slurDottedWidth>0.1</slurDottedWidth>
     <minTieLength>1</minTieLength>
+    <minStraightGlissandoLength>1.2</minStraightGlissandoLength>
+    <minWigglyGlissandoLength>2</minWigglyGlissandoLength>
     <slurMinDistance>0.5</slurMinDistance>
+    <headerSlurTieDistance>1</headerSlurTieDistance>
     <sectionPause>3</sectionPause>
     <musicalSymbolFont>Leland</musicalSymbolFont>
     <musicalTextFont>Leland Text</musicalTextFont>
@@ -375,7 +419,9 @@
     <voltaPosAbove x="0" y="-2"/>
     <voltaHook>1.9</voltaHook>
     <voltaLineWidth>0.11</voltaLineWidth>
-    <voltaLineStyle>1</voltaLineStyle>
+    <voltaLineStyle>solid</voltaLineStyle>
+    <voltaDashLineLen>5</voltaDashLineLen>
+    <voltaDashGapLen>5</voltaDashGapLen>
     <voltaFontFace>FreeSerif</voltaFontFace>
     <voltaFontSize>11</voltaFontSize>
     <voltaLineSpacing>1</voltaLineSpacing>
@@ -425,7 +471,9 @@
     <ottavaHookAbove>1.9</ottavaHookAbove>
     <ottavaHookBelow>-1.9</ottavaHookBelow>
     <ottavaLineWidth>0.11</ottavaLineWidth>
-    <ottavaLineStyle>2</ottavaLineStyle>
+    <ottavaLineStyle>dashed</ottavaLineStyle>
+    <ottavaDashLineLen>6</ottavaDashLineLen>
+    <ottavaDashGapLen>6</ottavaDashGapLen>
     <ottavaNumbersOnly>1</ottavaNumbersOnly>
     <ottavaFontFace>FreeSerif</ottavaFontFace>
     <ottavaFontSize>10</ottavaFontSize>
@@ -433,7 +481,8 @@
     <ottavaFontSpatiumDependent>1</ottavaFontSpatiumDependent>
     <ottavaFontStyle>0</ottavaFontStyle>
     <ottavaColor r="0" g="0" b="0" a="255"/>
-    <ottavaTextAlign>left,center</ottavaTextAlign>
+    <ottavaTextAlignAbove>left,top</ottavaTextAlignAbove>
+    <ottavaTextAlignBelow>left,baseline</ottavaTextAlignBelow>
     <ottavaFrameType>0</ottavaFrameType>
     <ottavaFramePadding>0.2</ottavaFramePadding>
     <ottavaFrameWidth>0.1</ottavaFrameWidth>
@@ -447,6 +496,8 @@
     <tremoloDistance>0.8</tremoloDistance>
     <tremoloStrokeStyle>0</tremoloStrokeStyle>
     <tremoloStrokeLengthMultiplier>0.62</tremoloStrokeLengthMultiplier>
+    <tremoloNoteSidePadding>1.25</tremoloNoteSidePadding>
+    <tremoloOutSidePadding>0.5</tremoloOutSidePadding>
     <linearStretch>1.5</linearStretch>
     <crossMeasureValues>0</crossMeasureValues>
     <keySigNaturals>1</keySigNaturals>
@@ -483,9 +534,15 @@
     <minVerticalDistance>0.5</minVerticalDistance>
     <ornamentStyle>0</ornamentStyle>
     <autoplaceHairpinDynamicsDistance>0.5</autoplaceHairpinDynamicsDistance>
+    <dynamicsOverrideFont>0</dynamicsOverrideFont>
+    <dynamicsFont>Leland</dynamicsFont>
+    <dynamicsSize>1</dynamicsSize>
     <dynamicsPlacement>1</dynamicsPlacement>
     <dynamicsPosAbove x="0" y="-3"/>
     <dynamicsPosBelow x="0" y="4"/>
+    <avoidBarLines>1</avoidBarLines>
+    <snapToDynamics>1</snapToDynamics>
+    <centerOnNotehead>1</centerOnNotehead>
     <dynamicsMinDistance>0.5</dynamicsMinDistance>
     <autoplaceVerticalAlignRange>2</autoplaceVerticalAlignRange>
     <textLinePlacement>0</textLinePlacement>
@@ -642,6 +699,43 @@
     <stringNumberFrameFgColor r="0" g="0" b="0" a="255"/>
     <stringNumberFrameBgColor r="255" g="255" b="255" a="0"/>
     <stringNumberOffset x="0" y="0"/>
+    <preferSameStringForTranspose>0</preferSameStringForTranspose>
+    <harpPedalDiagramFontFace>Edwin</harpPedalDiagramFontFace>
+    <harpPedalDiagramFontSize>10</harpPedalDiagramFontSize>
+    <harpPedalDiagramLineSpacing>1</harpPedalDiagramLineSpacing>
+    <harpPedalDiagramFontSpatiumDependent>1</harpPedalDiagramFontSpatiumDependent>
+    <harpPedalDiagramFontStyle>0</harpPedalDiagramFontStyle>
+    <harpPedalDiagramColor r="0" g="0" b="0" a="255"/>
+    <harpPedalDiagramAlign>center,center</harpPedalDiagramAlign>
+    <harpPedalDiagramFrameType>0</harpPedalDiagramFrameType>
+    <harpPedalDiagramFramePadding>0.2</harpPedalDiagramFramePadding>
+    <harpPedalDiagramFrameWidth>0.1</harpPedalDiagramFrameWidth>
+    <harpPedalDiagramFrameRound>0</harpPedalDiagramFrameRound>
+    <harpPedalDiagramFrameFgColor r="0" g="0" b="0" a="255"/>
+    <harpPedalDiagramFrameBgColor r="255" g="255" b="255" a="0"/>
+    <harpPedalDiagramOffset x="0" y="0"/>
+    <harpPedalDiagramPlacement>0</harpPedalDiagramPlacement>
+    <harpPedalDiagramPosAbove x="0" y="-1"/>
+    <harpPedalDiagramPosBelow x="0" y="2.5"/>
+    <harpPedalDiagramMinDistance>0.5</harpPedalDiagramMinDistance>
+    <harpPedalTextDiagramFontFace>Edwin</harpPedalTextDiagramFontFace>
+    <harpPedalTextDiagramFontSize>8</harpPedalTextDiagramFontSize>
+    <harpPedalTextDiagramLineSpacing>1</harpPedalTextDiagramLineSpacing>
+    <harpPedalTextDiagramFontSpatiumDependent>1</harpPedalTextDiagramFontSpatiumDependent>
+    <harpPedalTextDiagramFontStyle>0</harpPedalTextDiagramFontStyle>
+    <harpPedalTextDiagramColor r="0" g="0" b="0" a="255"/>
+    <harpPedalTextDiagramAlign>left,baseline</harpPedalTextDiagramAlign>
+    <harpPedalTextDiagramFrameType>0</harpPedalTextDiagramFrameType>
+    <harpPedalTextDiagramFramePadding>0.2</harpPedalTextDiagramFramePadding>
+    <harpPedalTextDiagramFrameWidth>0.1</harpPedalTextDiagramFrameWidth>
+    <harpPedalTextDiagramFrameRound>0</harpPedalTextDiagramFrameRound>
+    <harpPedalTextDiagramFrameFgColor r="0" g="0" b="0" a="255"/>
+    <harpPedalTextDiagramFrameBgColor r="255" g="255" b="255" a="0"/>
+    <harpPedalTextDiagramOffset x="0" y="0"/>
+    <harpPedalTextDiagramPlacement>1</harpPedalTextDiagramPlacement>
+    <harpPedalTextDiagramPosAbove x="0" y="-1.5"/>
+    <harpPedalTextDiagramPosBelow x="0" y="2.5"/>
+    <harpPedalTextDiagramMinDistance>0.5</harpPedalTextDiagramMinDistance>
     <longInstrumentFontFace>FreeSerif</longInstrumentFontFace>
     <longInstrumentFontSize>12</longInstrumentFontSize>
     <longInstrumentLineSpacing>1</longInstrumentLineSpacing>
@@ -706,12 +800,15 @@
     <expressionAlign>left,baseline</expressionAlign>
     <expressionPlacement>1</expressionPlacement>
     <expressionOffset x="0" y="3.5"/>
+    <expressionPosAbove x="0" y="-1.5"/>
+    <expressionPosBelow x="0" y="2.5"/>
     <expressionFrameType>0</expressionFrameType>
     <expressionFramePadding>0.2</expressionFramePadding>
     <expressionFrameWidth>0.1</expressionFrameWidth>
     <expressionFrameRound>0</expressionFrameRound>
     <expressionFrameFgColor r="0" g="0" b="0" a="255"/>
     <expressionFrameBgColor r="255" g="255" b="255" a="0"/>
+    <expressionMinDistance>0.5</expressionMinDistance>
     <tempoFontFace>FreeSerif</tempoFontFace>
     <tempoFontSize>12</tempoFontSize>
     <tempoLineSpacing>1</tempoLineSpacing>
@@ -730,6 +827,28 @@
     <tempoFrameRound>0</tempoFrameRound>
     <tempoFrameFgColor r="0" g="0" b="0" a="255"/>
     <tempoFrameBgColor r="255" g="255" b="255" a="0"/>
+    <tempoChangeFontFace>Edwin</tempoChangeFontFace>
+    <tempoChangeFontSize>12</tempoChangeFontSize>
+    <tempoChangeLineSpacing>1</tempoChangeLineSpacing>
+    <tempoChangeFontSpatiumDependent>1</tempoChangeFontSpatiumDependent>
+    <tempoChangeFontStyle>1</tempoChangeFontStyle>
+    <tempoChangeColor r="0" g="0" b="0" a="255"/>
+    <tempoChangeAlign>left,baseline</tempoChangeAlign>
+    <tempoChangeSystemFlag>1</tempoChangeSystemFlag>
+    <tempoChangePlacement>0</tempoChangePlacement>
+    <tempoChangePosAbove x="0" y="-2"/>
+    <tempoChangePosBelow x="0" y="3"/>
+    <tempoChangeMinDistance>0.5</tempoChangeMinDistance>
+    <tempoChangeFrameType>0</tempoChangeFrameType>
+    <tempoChangeFramePadding>0.2</tempoChangeFramePadding>
+    <tempoChangeFrameWidth>0.1</tempoChangeFrameWidth>
+    <tempoChangeFrameRound>0</tempoChangeFrameRound>
+    <tempoChangeFrameFgColor r="0" g="0" b="0" a="255"/>
+    <tempoChangeFrameBgColor r="255" g="255" b="255" a="0"/>
+    <tempoChangeLineWidth>0.15</tempoChangeLineWidth>
+    <tempoChangeLineStyle>dashed</tempoChangeLineStyle>
+    <tempoChangeDashLineLen>6</tempoChangeDashLineLen>
+    <tempoChangeDashGapLen>9</tempoChangeDashGapLen>
     <metronomeFontFace>FreeSerif</metronomeFontFace>
     <metronomeFontSize>12</metronomeFontSize>
     <metronomeLineSpacing>1</metronomeLineSpacing>
@@ -752,7 +871,7 @@
     <measureNumberFontStyle>0</measureNumberFontStyle>
     <measureNumberColor r="0" g="0" b="0" a="255"/>
     <measureNumberOffset x="0" y="-2"/>
-    <measureNumberPosBelow x="0" y="2"/>
+    <measureNumberPosBelow x="0" y="1"/>
     <measureNumberOffsetType>1</measureNumberOffsetType>
     <measureNumberVPlacement>0</measureNumberVPlacement>
     <measureNumberHPlacement>0</measureNumberHPlacement>
@@ -1212,8 +1331,9 @@
     <letRingPosAbove x="0" y="0"/>
     <letRingPosBelow x="0" y="0"/>
     <letRingLineWidth>0.15</letRingLineWidth>
-    <letRingLineStyle>2</letRingLineStyle>
-    <letRingBeginTextOffset x="0" y="0.15"/>
+    <letRingLineStyle>dashed</letRingLineStyle>
+    <letRingDashLineLen>5</letRingDashLineLen>
+    <letRingDashGapLen>5</letRingDashGapLen>
     <letRingText>let ring</letRingText>
     <letRingFrameType>0</letRingFrameType>
     <letRingFramePadding>0.2</letRingFramePadding>
@@ -1234,8 +1354,9 @@
     <palmMutePosAbove x="0" y="-4"/>
     <palmMutePosBelow x="0" y="4"/>
     <palmMuteLineWidth>0.15</palmMuteLineWidth>
-    <palmMuteLineStyle>2</palmMuteLineStyle>
-    <palmMuteBeginTextOffset x="0" y="0.15"/>
+    <palmMuteLineStyle>dashed</palmMuteLineStyle>
+    <palmMuteDashLineLen>5</palmMuteDashLineLen>
+    <palmMuteDashGapLen>5</palmMuteDashGapLen>
     <palmMuteText>P.M.</palmMuteText>
     <palmMuteFrameType>0</palmMuteFrameType>
     <palmMuteFramePadding>0.2</palmMuteFramePadding>
@@ -1263,1391 +1384,37 @@
     <voltaMinDistance>1</voltaMinDistance>
     <figuredBassMinDistance>0.5</figuredBassMinDistance>
     <tupletMinDistance>0.5</tupletMinDistance>
+    <slurShowTabSimple>1</slurShowTabSimple>
+    <slurShowTabCommon>1</slurShowTabCommon>
+    <fermataShowTabSimple>1</fermataShowTabSimple>
+    <fermataShowTabCommon>1</fermataShowTabCommon>
+    <dynamicsShowTabSimple>1</dynamicsShowTabSimple>
+    <dynamicsShowTabCommon>1</dynamicsShowTabCommon>
+    <hairpinShowTabSimple>1</hairpinShowTabSimple>
+    <hairpinShowTabCommon>1</hairpinShowTabCommon>
+    <accentShowTabSimple>1</accentShowTabSimple>
+    <accentShowTabCommon>1</accentShowTabCommon>
+    <staccatoShowTabSimple>1</staccatoShowTabSimple>
+    <staccatoShowTabCommon>1</staccatoShowTabCommon>
+    <harmonicMarkShowTabSimple>1</harmonicMarkShowTabSimple>
+    <harmonicMarkShowTabCommon>1</harmonicMarkShowTabCommon>
+    <letRingShowTabSimple>1</letRingShowTabSimple>
+    <letRingShowTabCommon>1</letRingShowTabCommon>
+    <palmMuteShowTabSimple>1</palmMuteShowTabSimple>
+    <palmMuteShowTabCommon>1</palmMuteShowTabCommon>
+    <rasgueadoShowTabSimple>1</rasgueadoShowTabSimple>
+    <rasgueadoShowTabCommon>1</rasgueadoShowTabCommon>
+    <mordentShowTabSimple>1</mordentShowTabSimple>
+    <mordentShowTabCommon>1</mordentShowTabCommon>
+    <turnShowTabSimple>1</turnShowTabSimple>
+    <turnShowTabCommon>1</turnShowTabCommon>
+    <wahShowTabSimple>1</wahShowTabSimple>
+    <wahShowTabCommon>1</wahShowTabCommon>
+    <golpeShowTabSimple>1</golpeShowTabSimple>
+    <golpeShowTabCommon>1</golpeShowTabCommon>
+    <chordlineThickness>0.16</chordlineThickness>
     <autoplaceEnabled>1</autoplaceEnabled>
-    <usePre_3_6_defaults>1</usePre_3_6_defaults>
     <defaultsVersion>301</defaultsVersion>
-    <ChordList>
-      <font id="0" family="default">
-        <mag>1</mag>
-        <sym name="accidentales" code="0x266d"/>
-        <sym name="accidentalis" code="0x266f"/>
-        <sym name="accidentals" code="0x266d"/>
-        <sym name="notea" value="a"/>
-        <sym name="noteb" value="b"/>
-        <sym name="notec" value="c"/>
-        <sym name="noted" value="d"/>
-        <sym name="notee" value="e"/>
-        <sym name="notef" value="f"/>
-        <sym name="noteg" value="g"/>
-        <sym name="noteh" value="h"/>
-        </font>
-      <font id="1" family="FreeSerif">
-        <mag>1.2</mag>
-        <sym name="#" code="0x266f"/>
-        <sym name="b" code="0x266d"/>
-        </font>
-      <renderRoot>:n m:0:-1 :a m:0.5:1</renderRoot>
-      <renderFunction>:a m:0.5:0 :n</renderFunction>
-      <renderBase>m:-0.2:1 / m:0.2:1 :n :a m:0:-2</renderBase>
-      <chord id="1">
-        <name></name>
-        <name></name>
-        <xml>major</xml>
-        <voicing>C E G</voicing>
-        <render></render>
-        </chord>
-      <chord id="2">
-        <name>Maj</name>
-        <xml>major</xml>
-        <voicing>C E G</voicing>
-        <render>Maj</render>
-        </chord>
-      <chord id="3">
-        <name>5b</name>
-        <xml>major</xml>
-        <voicing>C E Gb</voicing>
-        <degree>altb5</degree>
-        <render>5 b</render>
-        </chord>
-      <chord id="4">
-        <name>+</name>
-        <xml>augmented</xml>
-        <voicing>C E Ab</voicing>
-        <render>+</render>
-        </chord>
-      <chord id="5">
-        <name>6</name>
-        <xml>major-sixth</xml>
-        <voicing>C E G A</voicing>
-        <render>6</render>
-        </chord>
-      <chord id="6">
-        <name>Maj7</name>
-        <xml>major-seventh</xml>
-        <voicing>C E G B</voicing>
-        <render>Maj 7</render>
-        </chord>
-      <chord id="7">
-        <name>Maj9</name>
-        <xml>major-ninth</xml>
-        <voicing>C D E G B</voicing>
-        <render>Maj 9</render>
-        </chord>
-      <chord id="8">
-        <name>Maj9#11</name>
-        <xml>major-ninth</xml>
-        <voicing>C D E Gb G B</voicing>
-        <degree>add#11</degree>
-        <render>Maj 9 # 11</render>
-        </chord>
-      <chord id="9">
-        <name>Maj13#11</name>
-        <xml>major-13th</xml>
-        <voicing>C D E Gb G A B</voicing>
-        <degree>add#11</degree>
-        <render>Maj 13 # 11</render>
-        </chord>
-      <chord id="10">
-        <name>Maj13</name>
-        <xml>major-13th</xml>
-        <voicing>C D E Gb G A B</voicing>
-        <render>Maj 13</render>
-        </chord>
-      <chord id="11">
-        <name>Maj9(no 3)</name>
-        <xml>major-ninth</xml>
-        <voicing>C D G B</voicing>
-        <degree>sub3</degree>
-        <render>Maj 9 (no 3)</render>
-        </chord>
-      <chord id="12">
-        <name>+</name>
-        <xml>augmented</xml>
-        <voicing>C E Ab</voicing>
-        <render>+</render>
-        </chord>
-      <chord id="13">
-        <name>Maj7#5</name>
-        <xml>major-seventh</xml>
-        <voicing>C E Ab B</voicing>
-        <degree>alt#5</degree>
-        <render>Maj 7 # 5</render>
-        </chord>
-      <chord id="14">
-        <name>69</name>
-        <xml>major-sixth</xml>
-        <voicing>C D E G A</voicing>
-        <degree>add9</degree>
-        <render>69</render>
-        </chord>
-      <chord id="15">
-        <name>2</name>
-        <xml>major</xml>
-        <voicing>C D E G</voicing>
-        <degree>add2</degree>
-        <render>2</render>
-        </chord>
-      <chord id="16">
-        <name>m</name>
-        <xml>minor</xml>
-        <voicing>C Eb G</voicing>
-        <render>m</render>
-        </chord>
-      <chord id="17">
-        <name>m+</name>
-        <xml>minor</xml>
-        <voicing>C Eb Ab</voicing>
-        <degree>alt#5</degree>
-        <render>m+</render>
-        </chord>
-      <chord id="18">
-        <name>mMaj7</name>
-        <xml>major-minor</xml>
-        <voicing>C Eb G B</voicing>
-        <render>m Maj 7</render>
-        </chord>
-      <chord id="19">
-        <name>m7</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Eb G Bb</voicing>
-        <render>m7</render>
-        </chord>
-      <chord id="20">
-        <name>m9</name>
-        <xml>minor-ninth</xml>
-        <voicing>C D Eb G Bb</voicing>
-        <render>m9</render>
-        </chord>
-      <chord id="21">
-        <name>m11</name>
-        <xml>minor-11th</xml>
-        <voicing>C D Eb F G Bb</voicing>
-        <render>m11</render>
-        </chord>
-      <chord id="22">
-        <name>m13</name>
-        <xml>minor-13th</xml>
-        <voicing>C D Eb F G A Bb</voicing>
-        <render>m13</render>
-        </chord>
-      <chord id="23">
-        <name>m6</name>
-        <xml>minor-sixth</xml>
-        <voicing>C Eb G A</voicing>
-        <render>m6</render>
-        </chord>
-      <chord id="24">
-        <name>m#5</name>
-        <xml>minor</xml>
-        <voicing>C Eb Ab</voicing>
-        <degree>alt#5</degree>
-        <render>m # 5</render>
-        </chord>
-      <chord id="25">
-        <name>m7#5</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Eb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <render>m 7 # 5</render>
-        </chord>
-      <chord id="26">
-        <name>m69</name>
-        <xml>minor-sixth</xml>
-        <voicing>C D Eb G A</voicing>
-        <degree>add9</degree>
-        <render>m69</render>
-        </chord>
-      <chord id="27">
-        <name>Lyd</name>
-        <xml>major</xml>
-        <voicing>C E Gb G</voicing>
-        <degree>add#11</degree>
-        <render>Lyd</render>
-        </chord>
-      <chord id="28">
-        <name>Maj7Lyd</name>
-        <xml>major-seventh</xml>
-        <voicing>C D E G A</voicing>
-        <degree>add#11</degree>
-        <render>Maj 7 Lyd</render>
-        </chord>
-      <chord id="29">
-        <name>Maj7b5</name>
-        <xml>major-seventh</xml>
-        <voicing>C E Gb B</voicing>
-        <degree>altb5</degree>
-        <render>Maj 7 b 5</render>
-        </chord>
-      <chord id="32">
-        <name>m7b5</name>
-        <xml>half-diminished</xml>
-        <voicing>C Eb Gb Bb</voicing>
-        <render>m7 b 5</render>
-        </chord>
-      <chord id="33">
-        <name>dim</name>
-        <xml>diminished</xml>
-        <voicing>C Eb Gb</voicing>
-        <render>dim</render>
-        </chord>
-      <chord id="34">
-        <name>m9b5</name>
-        <xml>minor-ninth</xml>
-        <voicing>C D Eb Gb Bb</voicing>
-        <degree>altb5</degree>
-        <render>m9 b 5</render>
-        </chord>
-      <chord id="40">
-        <name>5</name>
-        <xml>power</xml>
-        <voicing>C G</voicing>
-        <render>5</render>
-        </chord>
-      <chord id="56">
-        <name>7+</name>
-        <xml>augmented-seventh</xml>
-        <voicing>C E Ab</voicing>
-        <render>7+</render>
-        </chord>
-      <chord id="57">
-        <name>9+</name>
-        <xml>augmented-ninth</xml>
-        <voicing>C D E Ab Bb</voicing>
-        <render>9+</render>
-        </chord>
-      <chord id="58">
-        <name>13+</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <render>13+</render>
-        </chord>
-      <chord id="59">
-        <name>(blues)</name>
-        <xml>major</xml>
-        <voicing>C Eb E G</voicing>
-        <degree>add#9</degree>
-        <render>(blues)</render>
-        </chord>
-      <chord id="60">
-        <name>7(Blues)</name>
-        <xml>dominant</xml>
-        <voicing>C E G Bb</voicing>
-        <degree>add#9</degree>
-        <render>7(blues)</render>
-        </chord>
-      <chord id="64">
-        <name>7</name>
-        <xml>dominant</xml>
-        <voicing>C E G Bb</voicing>
-        <render>7</render>
-        </chord>
-      <chord id="65">
-        <name>13</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E F G A Bb</voicing>
-        <render>13</render>
-        </chord>
-      <chord id="66">
-        <name>7b13</name>
-        <xml>dominant</xml>
-        <voicing>C E G Ab Bb</voicing>
-        <degree>addb13</degree>
-        <render>7 b 13</render>
-        </chord>
-      <chord id="67">
-        <name>7#11</name>
-        <xml>dominant</xml>
-        <voicing>C E Gb G Bb</voicing>
-        <degree>add#11</degree>
-        <render>7 # 11</render>
-        </chord>
-      <chord id="68">
-        <name>13#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E F Gb G A Bb</voicing>
-        <degree>add#11</degree>
-        <render>13 # 11</render>
-        </chord>
-      <chord id="69">
-        <name>7#11b13</name>
-        <xml>dominant</xml>
-        <voicing>C E Gb G Ab Bb</voicing>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 # 11 b 13</render>
-        </chord>
-      <chord id="70">
-        <name>9</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E G Bb</voicing>
-        <render>9</render>
-        </chord>
-      <chord id="72">
-        <name>9b13</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E G Ab Bb</voicing>
-        <degree>addb13</degree>
-        <render>9 b 13</render>
-        </chord>
-      <chord id="73">
-        <name>9#11</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb G Bb</voicing>
-        <degree>add#11</degree>
-        <render>9 # 11</render>
-        </chord>
-      <chord id="74">
-        <name>13#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E Gb G A Bb</voicing>
-        <degree>alt#11</degree>
-        <render>13 # 11</render>
-        </chord>
-      <chord id="75">
-        <name>9#11b13</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb G Ab Bb</voicing>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>9 # 11 b 13</render>
-        </chord>
-      <chord id="76">
-        <name>7b9</name>
-        <xml>dominant</xml>
-        <voicing>C Db E G Bb</voicing>
-        <degree>addb9</degree>
-        <render>7 b 9</render>
-        </chord>
-      <chord id="77">
-        <name>13b9</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Db E F G A Bb</voicing>
-        <degree>altb9</degree>
-        <render>13 b 9</render>
-        </chord>
-      <chord id="78">
-        <name>7b9b13</name>
-        <xml>dominant</xml>
-        <voicing>C Db E G Ab Bb</voicing>
-        <degree>addb9</degree>
-        <degree>addb13</degree>
-        <render>7 b 9 b 13</render>
-        </chord>
-      <chord id="79">
-        <name>7b9#11</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Gb G Bb</voicing>
-        <degree>addb9</degree>
-        <degree>alt#11</degree>
-        <render>7 b 9 # 11</render>
-        </chord>
-      <chord id="80">
-        <name>13b9#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Db E Gb G A Bb</voicing>
-        <degree>altb9</degree>
-        <degree>alt#11</degree>
-        <render>13 b 9 # 11</render>
-        </chord>
-      <chord id="81">
-        <name>7b9#11b13</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Gb G Ab Bb</voicing>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 b 9 # 11 b 13</render>
-        </chord>
-      <chord id="82">
-        <name>7#9</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E G Bb</voicing>
-        <degree>add#9</degree>
-        <render>7 # 9</render>
-        </chord>
-      <chord id="83">
-        <name>13#9</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Eb E F G A Bb</voicing>
-        <degree>alt#9</degree>
-        <render>13 # 9</render>
-        </chord>
-      <chord id="84">
-        <name>7#9b13</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E G Ab Bb</voicing>
-        <degree>add#9</degree>
-        <degree>addb13</degree>
-        <render>7 # 9 b 13</render>
-        </chord>
-      <chord id="85">
-        <name>9#11</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb G Bb</voicing>
-        <degree>add#11</degree>
-        <render>9 # 11</render>
-        </chord>
-      <chord id="86">
-        <name>13#9#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Eb E Gb G A Bb</voicing>
-        <degree>alt#9</degree>
-        <degree>alt#11</degree>
-        <render>13 # 9 # 11</render>
-        </chord>
-      <chord id="87">
-        <name>7#9#11b13</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Gb G Ab Bb</voicing>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 # 9 # 11 b 13</render>
-        </chord>
-      <chord id="88">
-        <name>7b5</name>
-        <xml>dominant</xml>
-        <voicing>C E Gb Bb</voicing>
-        <degree>altb5</degree>
-        <render>7 b 5</render>
-        </chord>
-      <chord id="89">
-        <name>13b5</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E F Gb A Bb</voicing>
-        <degree>altb5</degree>
-        <render>13 b 5</render>
-        </chord>
-      <chord id="90">
-        <name>7b5b13</name>
-        <xml>dominant</xml>
-        <voicing>C E Gb A Bb</voicing>
-        <degree>altb5</degree>
-        <degree>addb13</degree>
-        <render>7 b 5 b 13</render>
-        </chord>
-      <chord id="91">
-        <name>9b5</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb Bb</voicing>
-        <degree>altb5</degree>
-        <render>9 b 5</render>
-        </chord>
-      <chord id="92">
-        <name>9b5b13</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb Ab Bb</voicing>
-        <degree>altb5</degree>
-        <degree>addb13</degree>
-        <render>9 b 5 b 13</render>
-        </chord>
-      <chord id="93">
-        <name>7b5b9</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Gb Bb</voicing>
-        <degree>altb5</degree>
-        <degree>addb9</degree>
-        <render>7 b 5 b 9</render>
-        </chord>
-      <chord id="94">
-        <name>13b5b9</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Db E F Gb A Bb</voicing>
-        <degree>altb5</degree>
-        <degree>addb9</degree>
-        <render>13 b 5 b 9</render>
-        </chord>
-      <chord id="95">
-        <name>7b5b9b13</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Gb Ab Bb</voicing>
-        <degree>altb5</degree>
-        <degree>addb9</degree>
-        <degree>addb13</degree>
-        <render>7 b 5 b 9 b 13</render>
-        </chord>
-      <chord id="96">
-        <name>7b5#9</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Gb Bb</voicing>
-        <degree>altb5</degree>
-        <degree>add#9</degree>
-        <render>7 b 5 # 9</render>
-        </chord>
-      <chord id="97">
-        <name>13b5#9</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Eb E F Gb A Bb</voicing>
-        <degree>altb5</degree>
-        <degree>alt#9</degree>
-        <render>13 b 5 # 9</render>
-        </chord>
-      <chord id="98">
-        <name>7b5#9b13</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Gb Ab Bb</voicing>
-        <degree>altb5</degree>
-        <degree>add#9</degree>
-        <degree>addb13</degree>
-        <render>7 b 5 # 9 b 13</render>
-        </chord>
-      <chord id="99">
-        <name>7#5</name>
-        <xml>augmented-seventh</xml>
-        <voicing>C E Ab Bb</voicing>
-        <render>7 # 5</render>
-        </chord>
-      <chord id="100">
-        <name>13#5</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E F Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <render>13 # 5</render>
-        </chord>
-      <chord id="101">
-        <name>7#5#11</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add#11</degree>
-        <render>7 # 5 # 11</render>
-        </chord>
-      <chord id="102">
-        <name>13#5#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>alt#11</degree>
-        <render>13 # 5 # 11</render>
-        </chord>
-      <chord id="103">
-        <name>9#5</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <render>9 # 5</render>
-        </chord>
-      <chord id="104">
-        <name>9#5#11</name>
-        <xml>dominant-ninth</xml>
-        <voicing>C D E Gb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add#11</degree>
-        <render>9 # 5 # 11</render>
-        </chord>
-      <chord id="105">
-        <name>7#5b9</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>addb9</degree>
-        <render>7 # 5 b 9</render>
-        </chord>
-      <chord id="106">
-        <name>13#5b9</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Db E F Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>altb9</degree>
-        <render>13 # 5 b 9</render>
-        </chord>
-      <chord id="107">
-        <name>7#5b9#11</name>
-        <xml>dominant</xml>
-        <voicing>C Db E Gb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>addb9</degree>
-        <degree>add#11</degree>
-        <render>7 # 5 b 9 # 11</render>
-        </chord>
-      <chord id="108">
-        <name>13#5b9#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Db E Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>altb9</degree>
-        <degree>alt#11</degree>
-        <render>13 # 5 b 9 # 11</render>
-        </chord>
-      <chord id="109">
-        <name>7#5#9</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add#9</degree>
-        <render>7 # 5 # 9</render>
-        </chord>
-      <chord id="110">
-        <name>13#5#9#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Eb E Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>alt#9</degree>
-        <degree>alt#11</degree>
-        <render>13 # 5 # 9 # 11</render>
-        </chord>
-      <chord id="111">
-        <name>7#5#9#11</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Gb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <render>7 # 5 # 9 # 11</render>
-        </chord>
-      <chord id="112">
-        <name>13#5#9#11</name>
-        <xml>dominant-13th</xml>
-        <voicing>C Eb E Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>alt#9</degree>
-        <degree>alt#11</degree>
-        <render>13 # 5 # 9 # 11</render>
-        </chord>
-      <chord id="113">
-        <name>7alt</name>
-        <xml>dominant</xml>
-        <voicing>C Eb E Gb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <render>7 alt</render>
-        </chord>
-      <chord id="128">
-        <name>7sus</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F G Bb</voicing>
-        <degree>add7</degree>
-        <render>7 sus</render>
-        </chord>
-      <chord id="129">
-        <name>13sus</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>add13</degree>
-        <render>13 sus</render>
-        </chord>
-      <chord id="130">
-        <name>7susb13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 13</render>
-        </chord>
-      <chord id="131">
-        <name>7sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F G Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#11</degree>
-        <render>7 sus # 11</render>
-        </chord>
-      <chord id="132">
-        <name>13sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G A Bb</voicing>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 11</render>
-        </chord>
-      <chord id="133">
-        <name>7sus#11b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Gb G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 sus # 11 b 13</render>
-        </chord>
-      <chord id="134">
-        <name>9sus</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F G Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <render>9 sus</render>
-        </chord>
-      <chord id="135">
-        <name>9susb13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>addb13</degree>
-        <render>9 sus b 13</render>
-        </chord>
-      <chord id="136">
-        <name>9sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <render>9 sus # 11</render>
-        </chord>
-      <chord id="137">
-        <name>13sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 11</render>
-        </chord>
-      <chord id="138">
-        <name>13sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 11</render>
-        </chord>
-      <chord id="139">
-        <name>9sus#11b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>9 sus # 11 b 13</render>
-        </chord>
-      <chord id="140">
-        <name>7susb9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F G Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <render>7 sus b 9</render>
-        </chord>
-      <chord id="141">
-        <name>13susb9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <degree>add11</degree>
-        <degree>add13</degree>
-        <render>13 sus b 9</render>
-        </chord>
-      <chord id="142">
-        <name>7susb9b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 9 b 13</render>
-        </chord>
-      <chord id="143">
-        <name>7susb9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb G Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <degree>add#11</degree>
-        <render>7 sus b 9 # 11</render>
-        </chord>
-      <chord id="144">
-        <name>13susb9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Gb G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus b 9 # 11</render>
-        </chord>
-      <chord id="145">
-        <name>7susb9#11b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>addb9</degree>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 9 # 11 b 13</render>
-        </chord>
-      <chord id="146">
-        <name>7sus#9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F G Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <render>7 sus # 9</render>
-        </chord>
-      <chord id="147">
-        <name>13sus#9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add13</degree>
-        <render>13 sus # 9</render>
-        </chord>
-      <chord id="148">
-        <name>7sus#9b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>addb13</degree>
-        <render>7 sus # 9 b 13</render>
-        </chord>
-      <chord id="149">
-        <name>9sus#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb G Bb</voicing>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <render>9 sus # 11</render>
-        </chord>
-      <chord id="150">
-        <name>13sus#9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb G A Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 9 # 11</render>
-        </chord>
-      <chord id="151">
-        <name>7sus#9#11b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb G Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <degree>addb13</degree>
-        <render>7 sus # 9 # 11 b 13</render>
-        </chord>
-      <chord id="152">
-        <name>7susb5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Gb Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <render>7 sus b 5</render>
-        </chord>
-      <chord id="153">
-        <name>13susb5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb A Bb</voicing>
-        <degree>alt5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add13</degree>
-        <render>13 sus b 5</render>
-        </chord>
-      <chord id="154">
-        <name>7susb5b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Gb Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 5 b 13</render>
-        </chord>
-      <chord id="155">
-        <name>9susb5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb Bb</voicing>
-        <degree>alt5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <render>9 sus b 5</render>
-        </chord>
-      <chord id="156">
-        <name>9susb5b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb Ab Bb</voicing>
-        <degree>alt5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add13</degree>
-        <render>9 sus b 5 b 13</render>
-        </chord>
-      <chord id="157">
-        <name>7susb5b9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <degree>addb9</degree>
-        <render>7 sus b 5 b 9</render>
-        </chord>
-      <chord id="158">
-        <name>13susb5b9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb A Bb</voicing>
-        <degree>alt5</degree>
-        <degree>add7</degree>
-        <degree>altb9</degree>
-        <degree>add13</degree>
-        <render>13 sus b 5 b 9</render>
-        </chord>
-      <chord id="159">
-        <name>7susb5b9b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <degree>addb9</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 5 b 9 b 13</render>
-        </chord>
-      <chord id="160">
-        <name>7susb5#9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <degree>add#9</degree>
-        <render>7 sus b 5 # 9</render>
-        </chord>
-      <chord id="161">
-        <name>13susb5#9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb A Bb</voicing>
-        <degree>altb5</degree>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add13</degree>
-        <render>13 sus b 5 # 9</render>
-        </chord>
-      <chord id="162">
-        <name>7susb5#9b13</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>altb5</degree>
-        <degree>add#9</degree>
-        <degree>addb13</degree>
-        <render>7 sus b 5 # 9 b 13</render>
-        </chord>
-      <chord id="163">
-        <name>7sus#5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <render>7 sus # 5</render>
-        </chord>
-      <chord id="164">
-        <name>13sus#5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5</render>
-        </chord>
-      <chord id="165">
-        <name>7sus#5#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <degree>add#11</degree>
-        <render>7 sus # 5 # 11</render>
-        </chord>
-      <chord id="166">
-        <name>13sus#5#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5 # 11</render>
-        </chord>
-      <chord id="167">
-        <name>9sus#5</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <render>9 sus # 5</render>
-        </chord>
-      <chord id="168">
-        <name>9sus#5#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C D F Gb Ab Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <render>9 sus # 5 # 11</render>
-        </chord>
-      <chord id="169">
-        <name>7sus#5b9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <degree>addb9</degree>
-        <render>7 sus # 5 b 9</render>
-        </chord>
-      <chord id="170">
-        <name>13sus#5b9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5 b 9</render>
-        </chord>
-      <chord id="171">
-        <name>7sus#5b9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <degree>addb9</degree>
-        <degree>add#11</degree>
-        <render>7 sus # 5 b 9 # 11</render>
-        </chord>
-      <chord id="172">
-        <name>13sus#5b9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5 b 9 # 11</render>
-        </chord>
-      <chord id="173">
-        <name>7sus#5#9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <degree>add#9</degree>
-        <render>7 sus # 5 # 9</render>
-        </chord>
-      <chord id="174">
-        <name>13sus#5#9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5 # 9 # 11</render>
-        </chord>
-      <chord id="175">
-        <name>7sus#5#9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb Ab Bb</voicing>
-        <degree>add7</degree>
-        <degree>alt#5</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <render>7 sus # 5 # 9 # 11</render>
-        </chord>
-      <chord id="176">
-        <name>13sus#5#9#11</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Eb F Gb Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <degree>add7</degree>
-        <degree>add#9</degree>
-        <degree>add#11</degree>
-        <degree>add13</degree>
-        <render>13 sus # 5 # 9 # 11</render>
-        </chord>
-      <chord id="177">
-        <name>4</name>
-        <xml>major</xml>
-        <voicing>C E F G</voicing>
-        <degree>add4</degree>
-        <render>4</render>
-        </chord>
-      <chord id="184">
-        <name>sus</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F G</voicing>
-        <render>sus</render>
-        </chord>
-      <chord id="185">
-        <name>dim7</name>
-        <xml>diminished-seventh</xml>
-        <voicing>C Eb Gb</voicing>
-        <render>dim 7</render>
-        </chord>
-      <chord id="186">
-        <name>sus2</name>
-        <xml>suspended-second</xml>
-        <voicing>C D G</voicing>
-        <render>sus 2</render>
-        </chord>
-      <chord id="187">
-        <name>maddb13</name>
-        <xml>minor</xml>
-        <voicing>C Eb Ab</voicing>
-        <degree>addb13</degree>
-        <render>m add b 13</render>
-        </chord>
-      <chord id="188">
-        <name>add#13</name>
-        <xml>major</xml>
-        <voicing>C E G Bb</voicing>
-        <degree>add#13</degree>
-        <render># 13</render>
-        </chord>
-      <chord id="189">
-        <name>add#11#13</name>
-        <xml>major</xml>
-        <voicing>C E Gb G Bb</voicing>
-        <degree>add#11</degree>
-        <degree>add#13</degree>
-        <render>add # 11 # 13</render>
-        </chord>
-      <chord id="190">
-        <name>add#13</name>
-        <xml>major</xml>
-        <voicing>C E G Bb</voicing>
-        <degree>add#13</degree>
-        <render>add # 13</render>
-        </chord>
-      <chord id="191">
-        <name>6add9</name>
-        <xml>major-sixth</xml>
-        <voicing>C D E G A</voicing>
-        <degree>add9</degree>
-        <render>6 add 9</render>
-        </chord>
-      <chord id="192">
-        <name>sus4</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C F G</voicing>
-        <render>sus 4</render>
-        </chord>
-      <chord id="193">
-        <name>11</name>
-        <xml>dominant-11th</xml>
-        <voicing>C D E F G Bb</voicing>
-        <render>11</render>
-        </chord>
-      <chord id="194">
-        <name>Maj11</name>
-        <xml>major-11th</xml>
-        <voicing>C D E F G B</voicing>
-        <render>Maj 11</render>
-        </chord>
-      <chord id="195">
-        <name>Tristan</name>
-        <xml>Tristan</xml>
-        <voicing>C D Gb Bb</voicing>
-        <render>Tristan</render>
-        </chord>
-      <chord id="196">
-        <name>m7add11</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Eb F G Bb</voicing>
-        <degree>add11</degree>
-        <render>m 7 add 11</render>
-        </chord>
-      <chord id="197">
-        <name>Maj7add13</name>
-        <xml>major-seventh</xml>
-        <voicing>C E G A B</voicing>
-        <degree>add13</degree>
-        <render>Maj 7 add 13</render>
-        </chord>
-      <chord id="198">
-        <name>madd9</name>
-        <xml>minor</xml>
-        <voicing>C D Eb G</voicing>
-        <degree>add9</degree>
-        <render>m add 9</render>
-        </chord>
-      <chord id="199">
-        <name>m9Maj7</name>
-        <xml>major-minor</xml>
-        <voicing>C D Eb G B</voicing>
-        <degree>add9</degree>
-        <render>m 9 Maj 7</render>
-        </chord>
-      <chord id="200">
-        <name>5</name>
-        <xml>pedal</xml>
-        <voicing>C G</voicing>
-        <degree>add5</degree>
-        <render>5</render>
-        </chord>
-      <chord id="201">
-        <name>m11b5</name>
-        <xml>minor-11th</xml>
-        <voicing>C D Eb F Gb Bb</voicing>
-        <degree>altb5</degree>
-        <render>m 11 b 5</render>
-        </chord>
-      <chord id="202">
-        <name>dim7add#7</name>
-        <xml>diminished-seventh</xml>
-        <voicing>C Eb Gb A B</voicing>
-        <degree>add#7</degree>
-        <render>dim 7 add # 7</render>
-        </chord>
-      <chord id="203">
-        <name>aug9</name>
-        <xml>augmented-seventh</xml>
-        <voicing>C D E Ab</voicing>
-        <degree>add9</degree>
-        <render># 5 9</render>
-        </chord>
-      <chord id="204">
-        <name>omit5</name>
-        <xml>major</xml>
-        <voicing>C E</voicing>
-        <degree>sub5</degree>
-        <render>omit 5</render>
-        </chord>
-      <chord id="205">
-        <name>aug7</name>
-        <xml>augmented-seventh</xml>
-        <voicing>C E Ab</voicing>
-        <render>aug 7</render>
-        </chord>
-      <chord id="206">
-        <name>aug9</name>
-        <xml>augmented-ninth</xml>
-        <voicing>C D E Ab Bb</voicing>
-        <render>aug 9</render>
-        </chord>
-      <chord id="207">
-        <name>aug13</name>
-        <xml>dominant-13th</xml>
-        <voicing>C D E Ab A Bb</voicing>
-        <degree>alt#5</degree>
-        <render>aug 13</render>
-        </chord>
-      <chord id="210">
-        <name>Maj7#11</name>
-        <xml>major-seventh</xml>
-        <voicing>C E Gb G B</voicing>
-        <degree>add#11</degree>
-        <render>Maj 7 # 11</render>
-        </chord>
-      <chord id="211">
-        <name>Maj9#5</name>
-        <xml>major-ninth</xml>
-        <voicing>C D E Ab B</voicing>
-        <degree>alt#5</degree>
-        <render>Maj 9 # 5</render>
-        </chord>
-      <chord id="212">
-        <name>Maj7#9</name>
-        <xml>major-seventh</xml>
-        <voicing>C Eb E G B</voicing>
-        <degree>add#9</degree>
-        <render>Maj 7 # 9</render>
-        </chord>
-      <chord id="213">
-        <name>add2</name>
-        <xml>major</xml>
-        <voicing>C D E G</voicing>
-        <degree>add2</degree>
-        <render>add 2</render>
-        </chord>
-      <chord id="214">
-        <name>add9</name>
-        <xml>major</xml>
-        <voicing>C D E G</voicing>
-        <degree>add9</degree>
-        <render>add 9</render>
-        </chord>
-      <chord id="215">
-        <name>susb9</name>
-        <xml>suspended-fourth</xml>
-        <voicing>C Db F G</voicing>
-        <degree>addb9</degree>
-        <render>sus b 9</render>
-        </chord>
-      <chord id="216">
-        <name>Maj7sus</name>
-        <xml>major-seventh</xml>
-        <voicing>C F G B</voicing>
-        <degree>sub3</degree>
-        <degree>add4</degree>
-        <render>Maj 7 sus</render>
-        </chord>
-      <chord id="217">
-        <name>Maj9sus</name>
-        <xml>major-ninth</xml>
-        <voicing>C D F G B</voicing>
-        <degree>sub3</degree>
-        <degree>add4</degree>
-        <render>Maj 9 sus</render>
-        </chord>
-      <chord id="220">
-        <name>m7b9</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Db Eb G Bb</voicing>
-        <degree>addb9</degree>
-        <render>m 7 b 9</render>
-        </chord>
-      <chord id="221">
-        <name>m7b13</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Eb G Ab Bb</voicing>
-        <degree>addb13</degree>
-        <render>m 7 b 13</render>
-        </chord>
-      <chord id="222">
-        <name>Phryg</name>
-        <xml>minor-seventh</xml>
-        <voicing>C Db Eb F G Bb</voicing>
-        <degree>addb9</degree>
-        <degree>add4</degree>
-        <render>Phryg</render>
-        </chord>
-      <chord id="223">
-        <name>madd2</name>
-        <xml>minor</xml>
-        <voicing>C D Eb G</voicing>
-        <degree>add9</degree>
-        <render>m add 2</render>
-        </chord>
-      <chord id="230">
-        <name>7b9#9</name>
-        <xml>dominant</xml>
-        <voicing>C Db Eb E G Bb</voicing>
-        <degree>addb9</degree>
-        <degree>add#9</degree>
-        <render>7 b 9 # 9</render>
-        </chord>
-      <chord id="240">
-        <name>sus#4</name>
-        <xml>major</xml>
-        <voicing>C Gb G</voicing>
-        <degree>sub3</degree>
-        <degree>add#4</degree>
-        <render>sus # 4</render>
-        </chord>
-      <chord id="241">
-        <name>Maj7b13</name>
-        <xml>major-seventh</xml>
-        <voicing>C E G Ab B</voicing>
-        <degree>addb13</degree>
-        <render>Maj 7 b 13</render>
-        </chord>
-      </ChordList>
     <Spatium>1.764</Spatium>
     </Style>
   </museScore>
