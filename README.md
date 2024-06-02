@@ -16,12 +16,12 @@ shuls that aren't in this repository. This is because I own copies of a couple
 of Sephardic song books by Velvel Pasternak, and I've opted not to
 re-transcribe songs that can be found in the songbooks I already own.
 
-These songs are in MuseScore 3.x format.
 
 # To do list
 
-These are songs I may want to transcribe if I ever get around to them.
+Songs I still want to transcribe:
 
  * Yifrach v'Yirbeh
- * Yedidi Roi Mikimi
  * Chai v'Nelam
+ * Rayonai Yachid
+ * Yedid Hashev et Shevuti
