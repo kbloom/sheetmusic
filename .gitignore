@@ -2,4 +2,6 @@ songbook.aux
 songbook.log
 songbook.pdf
 songbook.toc
+songbook.out
+songbook-cover.pdf
 .songbook.tex.swp
