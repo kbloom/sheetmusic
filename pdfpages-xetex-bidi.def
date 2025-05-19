@@ -1,0 +1,5 @@
+\RequirePackage{etoolbox}
+\expandafter\patchcmd\csname\string\includepdf\endcsname
+  {\begingroup}{\begingroup\@RTLfalse}{%
+  \PackageInfo{pdfpages-xetex-bidi}{Patching command includepdf}}{%
+  \PackageError{pdfpages-xetex-bidi}{Failed patching command includepdf}{}}
