@@ -1,0 +1,437 @@
+\documentclass[letterpaper]{memoir}
+\usepackage{pdfpages}
+\usepackage{polyglossia}
+\usepackage{hyperref}
+\usepackage{ifoddpage}
+\setsecnumdepth{none}
+
+\usepackage{fontspec}
+\setmainfont{Frank Ruehl CLM}
+\setmonofont{Miriam Mono CLM}
+\setsansfont{Simple CLM}
+
+% Work around broken \nameref interaction between memoir and hyperref
+% from https://tex.stackexchange.com/a/648577
+\makeatletter
+\RenewDocumentCommand\nameref{s}
+    {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
+\makeatother
+
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+
+\title{\RL{ותקעתם בחצוצרות} \\
+Utkatem BaChatzotzrot \\
+The Pizmonim Fakebook \\
+For B$\flat$ Trumpet
+}
+\author{Chanoch Bloom}
+
+% Takes 2 arguments
+%  #1: The display name for the table of contents
+%  #2: The PDF file to include. This PDF name is used as a label for cross references.
+\newcommand{\song}[2]{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
+
+\newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
+
+% The first argument is a 2-page song that is forced onto facing pages.
+% The second argument is a 1-page song whose location may be swapped to 
+% make that possible.
+% The first page of a two-page song needs to be on an even page. 
+\newcommand{\forcefacingpages}[2]{
+   \checkoddpage
+   \ifoddpage
+   #2
+   #1
+   \else
+   #1
+   #2
+   \fi
+}
+
+
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
+\setlength{\footskip}{72pt}
+\pagestyle{plain}
+\tableofcontents*
+
+\chapter{Forward}
+
+\begin{RTL}
+\begin{quotation}
+\begin{center}
+וביום שמחתכם ובמועדיכם ובראשי חדשיכם
+\textbf{ותקעתם בחצצרת} 
+על עלתיכם ועל זבחי שלמיכם והיו לכם לזכרון לפני אלקיכם אני ה' אלקיכם
+\end{center}
+\end{quotation}
+\end{RTL}
+
+When I first encountered Sephardic music, I was taken by the breadth of Jewish 
+music that I had never heard before, and that is mostly unknown outside of the 
+Sephardic world. I fell in love with the music and started trying to learn as 
+much as I could. Having such a wide repretoire of music available has enriched 
+my Shabbat table, and my Yom Tov, as well as the synagogue experience.
+
+When I took an interest to playing these songs on my trumpet, I found it 
+necessary to have sheet music to help me learn and practice. This is when I 
+discovered that melodies for Sephardic songs, like Arabic music in general, are 
+mostly an oral tradition. Though there are great collections of recordings available,
+very little of it has been written down as sheet music.
+The few existing collections of sheet music for 
+Sephardic songs, mostly don't intersect with the music that's popular in the 
+communities I am a part of. The books that are available either focus on giving 
+a view of Sephardic songs that come from many different Sephardic countries, or 
+they focus largely on Ladino songs, and don't delve deeply into the repertoire 
+of songs that are familiar in Middle Eastern Sephardic synagogues as I would 
+like. I therefore made it my business to learn to transcribe these songs while 
+learning to play them.
+
+Rav Ovadia Yosef writes in Yechave Da'at 5:2 that the major principle of 
+Sephardic music is found in the verse 
+"\RL{על ערבים בתוכה תלינו כינורתינו}" (Tehillim 137:2), expressing that the 
+Sephardic musical tradition is based on Arabic songs and Arabic scales 
+(maqamat).
+Some of the maqamat used in this book are generally tuned to the 12-note chromatic
+scale used in Western and European music, such as Ajam, Nahawand, Kurd, and 
+Hijaz. (Some of these scales are even used in Western music.)
+Other maqamat, such as Rast, Bayat, Sigah, and Saba call for
+the musician to play quarter tones. While I have not avoided songs 
+written in these scales, I have focused on transcribing them in a way that 
+sounds reasonably good on Western instruments, specifically on my trumpet, and 
+therefore I have not notated quarter tones in my music, and instead chosen a 
+note on the Western chromatic scale that works well enough in practice as a 
+substitute. Listening to recordings of these songs, and adjusting the intonation 
+by lipping notes up and down, or through use of the valve slides, may help some 
+songs to sound better.
+
+My sheet music does not included chords for harmonic accompaniment, because 
+harmonic accompaniment is largely absent from the Arabic music tradition based
+on maqamat. The maqamat that require quarter tones are generally hostile to 
+pleasing harmony, and even in maqamat that aren't hostile to harmony, the 
+hallmark of this style of music is to please the listener through melodic 
+devices, rather than harmonic devices.
+
+I have generally transposed these songs to be convenient to play on the 
+trumpet. These transpositions may not be convenient or correct for more 
+traditional Arabic instruments such as the oud or the violin.
+
+Velvel Pasternak is a giant in Jewish sheet music. The songs that he has 
+transcribed span the gamut from Chassidic to Sephardic to modern 
+Israeli. His books aim to cover a breadth of different Sephardic 
+traditions and include many popular Middle Eastern Sephardic songs, but 
+they don't delve as deeply into Middle Eastern music as I have here.
+I have a couple of his Sephardic books and have tried to avoid 
+duplicating any song that he has already included in the songbooks I 
+own.
+As a result, there are many songs in his Sephardic songbooks 
+that we do sing in Middle Eastern Sephardic synagogues, including some 
+of the more popular songs, so the reader is advised to look at his 
+songbooks in addition to my own.
+
+I don't consider myself to be an expert in Arabic music, and there are 
+certainly others in the shuls I frequent that have a broader knowledge of this 
+genre than I do, but I hope that others will find these transcriptions helpful.
+
+I'd like to thank my music teachers, Bill Golden Birdsong, Laurel 
+Verissimo, and John Burn for teaching me music in their bands at 
+Cupertino Junior High School and Homestead High School.
+I'd like to thank my rabbis and 
+chazzanim for teaching me the songs contained herein: Rabbi Daniel Raccah, Rabbi 
+Michael Azose, Rabbi Hertzel Yitzhak, Rabbi Aharon Hamaoui, Hazzan Rabbi Shimon 
+Cohen, Rabbi Aharon Raccah, and Hazzan Moshe Shemer. I'd like to thank my 
+parents for encouraging me to learn music. And most of all, I'd like to thank my 
+wife for supporting me and permitting me the time to accomplish all of the 
+transcriptions in this book.
+
+--Chanoch Bloom
+
+\section*{Resources}
+
+Full lyrics to most of the songs in this book can be found in the following seforim:
+
+\begin{itemize}
+\item \RL{אביעה רננות}.
+\item \RL{שיר ושבחה} by Moshe Batzri, published by \RL{מכון הכתב} in Jerusalem.
+\item \RL{שיר ושבחה חלל וזמרה}, published by the Sephardic Heritage Foundation in Brooklyn, NY.
+\end{itemize}
+
+\noindent
+Recordings of most of the songs in this book can be found at:
+
+\begin{itemize}
+\item \texttt{pizmonim.org}
+\item \texttt{piyut.org.il}
+\item \texttt{sephardichazzanut.com}
+\end{itemize}
+
+For those interested in learning more about
+Arabic music theory, I recommend \textit{Inside Arabic Music} by Johnny 
+Faraj and Sami Abu Shumays, and their companion website at \texttt{www.maqamworld.com}.
+Mauro Braunstein also has a great chapter on the Arabic maqamat at 
+\texttt{https://offtonic.com/theory/book/7-9.html}.
+
+
+
+
+\chapter{Shabbat}
+\song{Ashir La'el Asher Shavat}{Ashir_Lael_Asher_Shavat.pdf}
+
+\chapter{Turkish Melodies for Shabbat}
+\song{Yoducha Rayonai}{Yoducha_Rayonai_Turkish_with_octave_up.pdf}
+\song{Yom HaShabbat Ein Kamohu}{Yom_HaShabbat_Ein_Kamohu_Turkish.pdf}
+\song{Ki Eshmerah Shabbat}{Ki_Eshmerah_Shabbat_Turkish.pdf}
+
+\chapter{Bakashot for Shabbat}
+\song{L'maancha v'lo Lanu}{Lmaancha_vlo_lanu.pdf}
+\song{Yom Zeh Shiru La'el}{Yom_Zeh_Shiru_Lael.pdf}
+\song{Yoducha Rayonai}{Yoducha_Rayonai.pdf}
+\song{Yoducha Rayonai \#2}{Yoducha_Rayonai_2.pdf}
+\song{Yah Ribon Alam}{Yah_Ribon_Alam.pdf}
+\song{Yah Ribon Alam \#2}{Yah_Ribon_Alam_2.pdf}
+\song{Yedid Nefesh}{Yedid_Nefesh.pdf}
+\song{Agadelcha}{Agadelcha.pdf}
+
+\chapter{Motzae Shabbat}
+\song{Al Tira Avdi Yaakov}{Al_Tira_Avdi_Yaakov.pdf}
+
+\chapter{Maqam Rast Family}
+Maqam Rast makes use of quarter tones. When playing these songs on 
+western instruments, I have found that the quarter tones are variable, 
+and can be sharpened or flattened depending on the context, but I treat 
+the scale as mostly similar to Maqam Ajam and the western major scale.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Yah_Ribon_Alam.pdf}
+\end{itemize}
+\song{Eli Yah Eli}{Eli_Yah_Eli.pdf} % possibly omit, because it's unclear whether I did it in the right key
+\song{Riva Riva}{Riva_Riva.pdf}
+\song{El Hon}{El_Hon.pdf}
+\song{Boee B'rinah}{Boee_Brinah.pdf}
+\song{N'imah Li}{Nimah_Li.pdf}
+\song{Rachum Bach Yagel Levavi}{Rachum_Bach_Yagel_Levavi.pdf}
+
+\chapter{Maqam Hijaz Family}
+Maqam Hijaz is considered to be equivalent to the Phrygian dominant 
+mode. Maqam Hijazkar, a common variant, is known in western music theory 
+as the double harmonic scale.
+
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Im_Chacham_Libecha_Beni.pdf}
+   \item \songref{Ronu_Gilu.pdf}
+\end{itemize}
+\song{Ana b'Chasdecha}{Ana_bChasdecha.pdf}
+\song{Eleicha Ekra Yah}{Eleicha_Ekra_Yah.pdf}
+\song{Ochil Yom Yom Yerushalyim}{Ochil_Yom_Yom_Yerushalyim.pdf}
+\song{Ozrenei El Chai}{Ozrenei_El_Chai.pdf}
+\song{El Galil}{El_Galil.pdf}
+
+\chapter{Maqam Ajam Family}
+Maqam Ajam is considered to be equivalent to the western major scale.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Yachid_Norah.pdf}
+   \item \songref{Roe_Neeman_Hu.pdf}
+   \item \songref{Chanun_Rachem.pdf}
+   \item \songref{Yah_Hatzel_Yonah.pdf}
+   \item \songref{Makhelot_Am.pdf}
+\end{itemize}
+\song{Refa Tziri}{Refa_Tziri.pdf}
+\song{Ani Likrat}{Ani_Likrat.pdf}
+\song{Ani Alayich Ayuma}{Ani_Alayich_Ayuma.pdf}
+\song{Yinon Shemo}{Yinon_Shemo.pdf}
+\song{Kol Et Eleicha}{Kol_Et_Eleicha.pdf}
+\song{Halleluyah Tehillim 150}{Halleluyah_Tehillim_150.pdf}
+
+\chapter{Maqam Nahawand Family}
+Maqam Nahawand is considered to be equivalent to the western minor scale.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Lneri.pdf}
+   \item \songref{Rachum_Atah.pdf}
+   \item \songref{Yedid_Nefesh.pdf}
+   \item \songref{Agadelcha.pdf}
+\end{itemize}
+\song{Malki Tzuri El Kabir}{Malki_Tzuri_El_Kabir.pdf}
+\song{Lach Ana Orech}{Lach_Ana_Orech.pdf}
+\forcefacingpages{
+   \song{Im HaGolan}{Im_HaGolan.pdf}
+}{
+   \song{Ata El Kabir}{Ata_El_Kabir.pdf}
+}
+\song{Hayyim U'Madon}{Hayyim_UMadon.pdf}
+\song{L'David Shir U'Mizmor}{LDavid_Shir_uMizmor.pdf}
+\song{Rayonai Yachid}{Rayonai_Yachid.pdf}
+
+\chapter{Maqam Kurd Family}
+\song{Im Ninalu}{Im_Ninalu.pdf}
+\song{Eshal Elohai}{Eshal_Elohai.pdf}
+\song{Yerushalyim Ir HaBirah}{Yerushalyim_Ir_HaBirah.pdf}
+
+\chapter{Maqam Bayat Family}
+Maqam Bayat makes use of quarter tones. When playing these songs on 
+western instruments, I have found that the quarter tones are variable, 
+and can be sharpened or flattened depending on the context, but I treat 
+the scale as mostly similar to Maqam Nahawand and the western minor scale.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{El_Meod_Naalah.pdf}
+   \item \songref{Yaalah_Yaalah.pdf}
+   \item \songref{Yifat_Ayin.pdf}
+   \item \songref{Nava_Yafa_Tzviyah.pdf}
+   \item \songref{Ezer_Mitzarai.pdf}
+   \item \songref{Daat_Umzimah.pdf}
+   \item \songref{Mauzi.pdf}
+\end{itemize}
+\song{Yahaloma}{Yahaloma.pdf}
+\song{Ana Chaper}{Ana_Chaper.pdf}
+\song{Nagila Halleluyah}{Nagila_Halleluyah.pdf}
+\forcefacingpages
+{\song{Semach Beni B'Chelkecha}{Semach_Beni_BChelkecha.pdf}}
+{\song{Chochmaah Binah Yah Eli}{Chochmah_Binah_Yah_Eli.pdf}}
+\song{Havivi Yah Havivi}{Havivi_Yah_Havivi.pdf}
+\song{Yotzer MiYado}{Yotzer_MiYado.pdf}
+\song{Eretz HaKedoshah}{Eretz_haKedoshah.pdf}
+
+\chapter{Maqam Saba Family}
+One of the pitches in Maqam Saba is a quarter tone. When playing these 
+songs on western instruments, I have found that it's reasonable to 
+approximate it as maqam Saba Zamzam, which sharpens the quarter tone. 
+Either way, this scale doesn't really have an equivalent in western 
+music theory.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Yehi_Shalom_bCheleinu_Syrian.pdf}
+   \item \songref{Sukkah_vLulav_Iraqi.pdf}
+   \item \songref{Ki_Eshmerah_Shabbat_Turkish.pdf}
+   \item \songref{Atah_Ahuvi.pdf}
+\end{itemize}
+
+\song{Goel Yavo}{Goel_Yavo.pdf}
+\song{Yedidi Roi Mikimi}{Yedidi_Roi_Mikimi.pdf}
+\song{Li Yah Li Yah}{Li_Yah_Li_Yah.pdf}
+
+\chapter{Maqam Sigah Family}
+Maqam Sigah makes use of quareter tones, most notably on its tonic.
+At the synangogues that I've learned melodies from, it's rare to sing 
+songs Maqam Sigah when we're not borrowing their melodies for the 
+Shabbat prayers.
+I have transcribed a number of these songs to try and have some 
+familiarity with this maqam, mainly so that I can use this maqam in the 
+Shabbat prayers, however I don't yet understand it well 
+enough yet to be able to explain systematically what I'm doing to 
+approixmate it in my sheet music.
+
+In addition to the songs included in this section of the song book, 
+here's a list of songs in this maqam family that can be found in other 
+secctions of the song book:
+\begin{itemize}
+   \item \songref{Or_Gilah.pdf}
+   \item \songref{Eli_Tzur_Yishuati.pdf}
+\end{itemize}
+\song{Agila Agila}{Agila_Agila.pdf}
+\song{Adon Yachid}{Adon_Yachid.pdf}
+\song{HaYemei S'timei}{HaYemei_Stimei.pdf}
+\song{Yachid El Dagul}{Yachid_El_Dagul.pdf}
+\song{Nagila Halleluyah}{Nagila_Halleluyah_Sigah.pdf}
+
+\chapter{Yamim Noraim}
+\song{Lecha Eli}{Lecha_Eli.pdf}
+
+\chapter{Shalosh Regalim}
+\song{Mauzi}{Mauzi.pdf}
+\song{Samachti Tehillim 122}{Samachti.pdf}
+\song{B'tzeit Yisrael}{Btzeit_Yisrael.pdf}
+\song{Aromimcha}{Aromimcha.pdf}
+
+\chapter{Pesach}
+\song{Yachid Norah}{Yachid_Norah.pdf}
+\song{Rachum Atah}{Rachum_Atah.pdf}
+\song{B'neh Li Zevul Mishkani}{Bneh_Li_Zevul_Mishkani.pdf}
+\song{Emunim Irchu Shevach (Yerushalmi)}{Emunim_Irchu_Shevach_Yerushalyim.pdf}
+\song{Emunim Irchu Shevach (Syrian)}{Emunim_Irchu_Shevach_Syrian.pdf}
+\song{Mi Yimalel Gevurotecha}{Mi_Yimalel_Gevurotecha.pdf}
+\song{El B'Yado}{El_BYado.pdf}
+\song{El B'Yado \#2}{El_BYado_2.pdf}
+\song{El Maleh HaNechsar}{El_Maleh_HaNechsar.pdf}
+\song{Ashir laEl Ga'oh Ga'ah}{Ashir_laEl_Gaoh_Gaah.pdf}
+
+\chapter{Lag LaOmer}
+\song{V'amartem Ko Lachai}{Vamartem_Ko_Lachai.pdf}
+
+\chapter{Shavuot}
+\song{Roe' Ne'eman Hu}{Roe_Neeman_Hu.pdf}
+\song{Da'at Umzimah}{Daat_Umzimah.pdf}
+
+\chapter{Sukkot}
+\song{Sukkah v'Lulav (Moroccan)}{Sukkah_vLulav_Moroccan.pdf}
+\song{Sukkah v'Lulav (Yerushalmi)}{Sukkah_vLulav_Yerushalmi.pdf}
+\song{Sukkah v'Lulav (Iraqi)}{Sukkah_vLulav_Iraqi.pdf}
+\song{Chanun Rachem}{Chanun_Rachem.pdf}
+\song{Yah Et Sukkat David Takim}{Yah_Et_Sukkat_David_Takim.pdf}
+\song{Nizke l'kol Berachot (Iraqi)}{Nizke_lkol_Berachot_Bavel.pdf}
+\song{Nizke l'kol Berachot}{Nizke_lkol_Berachot.pdf}
+
+\chapter{Chanukah}
+\song{Yah Hatzel Yonah}{Yah_Hatzel_Yonah.pdf}
+\song{Heichalo Heichalo}{Heichalo_Heichalo.pdf}
+\song{Am Ne'emanai}{Am_Neemanai.pdf}
+\forcefacingpages
+{\song{Hanerot Halalu}{Hanerot_Halalu.pdf}}
+{\song{L'neri}{Lneri.pdf}}
+
+\chapter{Purim}
+\song{Ronu Gilu}{Ronu_Gilu.pdf}
+\song{Or Gilah}{Or_Gilah.pdf} % might not get included because it's in maqam sigah
+\song{El Melech Ne'eman}{El_Melech_Neeman.pdf}
+\song{Ezer Mitzarai}{Ezer_Mitzarai.pdf}
+\song{Simeni Rosh}{Simeni_Rosh.pdf}
+\song{Chish Misgabi Geulah}{Chish_Misgabi_Geulah.pdf}
+\song{Eli Tzur Yishuati}{Eli_Tzur_Yishuati.pdf}
+
+\chapter{Weddings}
+\song{Yismach Hatani}{Yismach_Hatani.pdf}
+\song{El Me'od Na'alah}{El_Meod_Naalah.pdf}
+\song{Im Chacham Libecha Beni}{Im_Chacham_Libecha_Beni.pdf}
+\song{Makhelot Am}{Makhelot_Am.pdf}
+\song{Et Dodim Kalah}{Et_Dodim_Kalah.pdf}
+
+\chapter{Brit Milah}
+\song{Mah Tov Mah Na'im}{Mah_Tov_Mah_Naim.pdf}
+\song{Yehi Shalom b'Cheleinu (Yerushalmi)}{Yehi_Shalom_bCheleinu_Yerushalmi.pdf}
+\song{Yehi Shalom B'Cheleinu (Syrian)}{Yehi_Shalom_bCheleinu_Syrian.pdf}
+\song{Atah Ahuvi}{Atah_Ahuvi.pdf}
+
+\chapter{Zeved HaBat}
+\song{Nava Yafa Tz'viyah}{Nava_Yafa_Tzviyah.pdf}
+\song{Yifat Ayin}{Yifat_Ayin.pdf}
+\song{Ya'alah Ya'alah}{Yaalah_Yaalah.pdf}
+
+
+\end{document}
