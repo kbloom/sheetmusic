@@ -27,5 +27,3 @@ Songs I still want to transcribe:
  * Ramach Everai
  * Yodu l'cha Rayonai (Esmach Bach)
  * Malki Eashal Mimach
- * Shimeru Shabtotai
- * I'm Eshkachech
