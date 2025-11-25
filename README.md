@@ -23,5 +23,9 @@ Songs I still want to transcribe:
 
  * Yifrach v'Yirbeh
  * Chai v'Nelam
- * Rayonai Yachid
  * Yedid Hashev et Shevuti
+ * Ramach Everai
+ * Yodu l'cha Rayonai (Esmach Bach)
+ * Malki Eashal Mimach
+ * Shimeru Shabtotai
+ * I'm Eshkachech
