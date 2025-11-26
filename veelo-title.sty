@@ -1,0 +1,59 @@
+\ProvidesPackage{veelo-title}
+\RequirePackage{xcolor}
+% --- Define the Custom Style ---
+\makechapterstyle{veelo-title}{
+  % 1. Inherit defaults from existing veelo
+  \chapterstyle{veelo}
+
+  % 2. Define the height and color of the bar
+  \newlength{\veeloBarHeight}
+  \setlength{\veeloBarHeight}{4em} % Height of the black box
+  \newcommand{\veeloBarColor}{\color{black}} % Change color here
+
+  % 3. Clean up the Number printing
+  % We remove the graphical elements from the number, 
+  % leaving just the text number itself.
+  \renewcommand*{\printchapternum}{%
+    \resizebox{!}{\veeloBarHeight}{\chapnumfont \thechapter}%
+  }
+  
+  % Adjust space between number and title
+  \setlength{\midchapskip}{20pt}
+
+  % 4. Redefine the Title printing
+  % This is where we add the box so it appears on unnumbered chapters too.
+  \renewcommand*{\printchaptertitle}[1]{%
+    \strictpagecheck % Ensure we know exactly which page we are on
+    \checkoddpage
+    \ifoddpage
+      % --- ODD PAGE (Right side) ---
+      % Layout: [Title Text] ... [Box to Edge]
+      \raggedright
+      \chaptitlefont ##1%
+      \hfill
+      % Create a box of zero width so it doesn't push the line down,
+      % then draw the rule extending to the right edge.
+      \smash{%
+        \makebox[0pt][l]{%
+           \hspace{0.5em}% Gap between title and box
+           \veeloBarColor
+           % Draw rule: Width = generous amount to ensure it hits edge
+           \rule{\paperwidth}{\veeloBarHeight}%
+        }%
+      }
+    \else
+      % --- EVEN PAGE (Left side) ---
+      % Layout: [Box from Edge] ... [Title Text]
+      \raggedleft
+      % Draw rule extending to the left edge
+      \smash{%
+        \makebox[0pt][r]{%
+           \veeloBarColor
+           \rule{\paperwidth}{\veeloBarHeight}%
+           \hspace{0.5em}% Gap between box and title
+        }%
+      }%
+      \chaptitlefont ##1
+    \fi
+  }
+}
