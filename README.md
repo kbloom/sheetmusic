@@ -25,5 +25,4 @@ Songs I still want to transcribe:
  * Chai v'Nelam
  * Yedid Hashev et Shevuti
  * Ramach Everai
- * Yodu l'cha Rayonai (Esmach Bach)
  * Malki Eashal Mimach
