@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{ifoddpage}
 \usepackage{veelo-title}
+\usepackage{etoolbox}
 \setsecnumdepth{none}
 
 \usepackage{fontspec}
@@ -18,6 +19,14 @@
     {\IfBooleanTF{#1}{\@namerefstar}{\T@nameref}}
 \makeatother
 
+\makepagestyle{musicbook}
+\makeevenfoot{musicbook}{\thepage}{}{}
+\makeoddfoot{musicbook}{}{}{\thepage}
+\setlength{\headwidth}{\pagewidth}
+\makerunningwidth{musicbook}{\headwidth}
+\aliaspagestyle{chapter}{musicbook}
+
+
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
 
@@ -31,7 +40,7 @@ For B$\flat$ Trumpet
 % Takes 2 arguments
 %  #1: The display name for the table of contents
 %  #2: The PDF file to include. This PDF name is used as a label for cross references.
-\newcommand{\song}[2]{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{plain}},addtotoc={1,section,1,#1,#2}]{#2}}
+\newcommand{\song}[2]{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{musicbook}},addtotoc={1,section,1,#1,#2}]{#2}}
 
 \newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
 
@@ -63,7 +72,7 @@ For B$\flat$ Trumpet
 \end{titlingpage}
 
 \setlength{\footskip}{72pt}
-\pagestyle{plain}
+\pagestyle{musicbook}
 \tableofcontents*
 
 \chapter{Forward}
