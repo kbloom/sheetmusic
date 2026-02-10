@@ -5,7 +5,6 @@
 \usepackage{ifoddpage}
 \usepackage{veelo-title}
 \usepackage{etoolbox}
-\usepackage{xkeyval}
 \setsecnumdepth{none}
 
 \usepackage{fontspec}
@@ -31,44 +30,40 @@
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
 
+% Takes 2 arguments
+%  #1: The display name for the table of contents
+%  #2: The PDF file to include. This PDF name is used as a label for cross references.
+\NewDocumentCommand{\song}{m m}{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{musicbook}},addtotoc={1,section,1,#1,#2}]{#2}}
+
+\NewDocumentCommand{\songref}{m}{\nameref{#1}, page \pageref{#1}}
+
+\DeclareKeys[facingpages]{
+   onepage .store = \fponepage ,
+   twopage .store = \fptwopage ,
+}
+\NewDocumentCommand{\forcefacingpages}{m}{%
+   \SetKeys[facingpages]{#1}
+   \checkoddpage
+   \ifoddpage
+   \fponepage
+   \fptwopage
+   \else
+   \fptwopage
+   \fponepage
+   \fi
+}
+
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
+
+\chapterstyle{veelo-title}
+
 \title{\RL{ותקעתם בחצוצרות} \\
 Utkatem BaChatzotzrot \\
 The Pizmonim Fakebook \\
 For B$\flat$ Trumpet
 }
 \author{Chanoch Bloom}
-
-% Takes 2 arguments
-%  #1: The display name for the table of contents
-%  #2: The PDF file to include. This PDF name is used as a label for cross references.
-\newcommand{\song}[2]{\includepdf[pages=-,offset=3mm 0,pagecommand={\thispagestyle{musicbook}},addtotoc={1,section,1,#1,#2}]{#2}}
-
-\newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
-
-\makeatletter
-\define@key{facingpagesargs}{onepage}{\def\fp@onepage{#1}}
-\define@key{facingpagesargs}{twopage}{\def\fp@twopage{#1}}
-\DeclareDocumentCommand{\forcefacingpages}{m}{%
-   \begingroup
-   \setkeys{facingpagesargs}{#1}
-   \checkoddpage
-   \ifoddpage
-   \fp@onepage
-   \fp@twopage
-   \else
-   \fp@twopage
-   \fp@onepage
-   \fi
-   \endgroup
-}
-\makeatother
-
-
-
-\usepackage{enumitem}
-\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
-
-\chapterstyle{veelo-title}
 
 \begin{document}
 
