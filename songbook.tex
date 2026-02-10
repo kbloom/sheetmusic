@@ -5,6 +5,7 @@
 \usepackage{ifoddpage}
 \usepackage{veelo-title}
 \usepackage{etoolbox}
+\usepackage{xkeyval}
 \setsecnumdepth{none}
 
 \usepackage{fontspec}
@@ -44,20 +45,24 @@ For B$\flat$ Trumpet
 
 \newcommand{\songref}[1]{\nameref{#1}, page \pageref{#1}}
 
-% The first argument is a 2-page song that is forced onto facing pages.
-% The second argument is a 1-page song whose location may be swapped to 
-% make that possible.
-% The first page of a two-page song needs to be on an even page. 
-\newcommand{\forcefacingpages}[2]{
+\makeatletter
+\define@key{facingpagesargs}{onepage}{\def\fp@onepage{#1}}
+\define@key{facingpagesargs}{twopage}{\def\fp@twopage{#1}}
+\DeclareDocumentCommand{\forcefacingpages}{m}{%
+   \begingroup
+   \setkeys{facingpagesargs}{#1}
    \checkoddpage
    \ifoddpage
-   #2
-   #1
+   \fp@onepage
+   \fp@twopage
    \else
-   #1
-   #2
+   \fp@twopage
+   \fp@onepage
    \fi
+   \endgroup
 }
+\makeatother
+
 
 
 \usepackage{enumitem}
@@ -291,11 +296,8 @@ secctions of the song book:
 \end{itemize}
 \song{Malki Tzuri El Kabir}{Malki_Tzuri_El_Kabir.pdf}
 \song{Lach Ana Orech}{Lach_Ana_Orech.pdf}
-\forcefacingpages{
-   \song{Im HaGolan}{Im_HaGolan.pdf}
-}{
-   \song{Ata El Kabir}{Ata_El_Kabir.pdf}
-}
+\song{Im HaGolan}{Im_HaGolan.pdf}
+\song{Ata El Kabir}{Ata_El_Kabir.pdf}
 \song{Hayyim U'Madon}{Hayyim_UMadon.pdf}
 \song{L'David Shir U'Mizmor}{LDavid_Shir_uMizmor.pdf}
 \song{Rayonai Yachid}{Rayonai_Yachid.pdf}
@@ -329,9 +331,10 @@ secctions of the song book:
 \song{Yahaloma}{Yahaloma.pdf}
 \song{Ana Chaper}{Ana_Chaper.pdf}
 \song{Nagila Halleluyah}{Nagila_Halleluyah.pdf}
-\forcefacingpages
-{\song{Semach Beni B'Chelkecha}{Semach_Beni_BChelkecha.pdf}}
-{\song{Chochmaah Binah Yah Eli}{Chochmah_Binah_Yah_Eli.pdf}}
+\forcefacingpages{
+   twopage={\song{Semach Beni B'Chelkecha}{Semach_Beni_BChelkecha.pdf}},
+   onepage={\song{Chochmaah Binah Yah Eli}{Chochmah_Binah_Yah_Eli.pdf}}
+}
 \song{Havivi Yah Havivi}{Havivi_Yah_Havivi.pdf}
 \song{Yotzer MiYado}{Yotzer_MiYado.pdf}
 \song{Eretz HaKedoshah}{Eretz_haKedoshah.pdf}
@@ -429,9 +432,10 @@ secctions of the song book:
 \song{Yah Hatzel Yonah}{Yah_Hatzel_Yonah.pdf}
 \song{Heichalo Heichalo}{Heichalo_Heichalo.pdf}
 \song{Am Ne'emanai}{Am_Neemanai.pdf}
-\forcefacingpages
-{\song{Hanerot Halalu}{Hanerot_Halalu.pdf}}
-{\song{L'neri}{Lneri.pdf}}
+\forcefacingpages{
+   twopage={\song{Hanerot Halalu}{Hanerot_Halalu.pdf}},
+   onepage= {\song{L'neri}{Lneri.pdf}}
+}
 \song{Malki Eshal Mimach}{Malki_Eshal_Mimach.pdf}
 
 \chapter{Purim}
@@ -469,7 +473,8 @@ traditional songs for a Bar Mitzvah include:
    \item Yoma Tava D'Rabbanan, sung to the melody of \songref{Yehi_Shalom_bCheleinu_Syrian.pdf}.
 \end{itemize}
 
-\song{Ramach Evarai}{Ramach_Evarai.pdf}
+% Two pages. Needs \forcefacingpages when I add another song
+\song{Ramach Evarai}{Ramach_Evarai.pdf} 
 
 
 \end{document}
